@@ -1,0 +1,256 @@
+{
+  "version": "0.4.5",
+  "date": "2026-10-29",
+  "files": [
+    {
+      "path": "BILINGUAL_REVIEW.md",
+      "bytes": 2346,
+      "sha256": "f3bfb6f6ee576c2a4b372259687b1703aa97da9a3e3cae1fea99b55d60cf09da"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "bytes": 756,
+      "sha256": "3487347a4ce8380766dcde4122f06058f6b73658510ed852b148893dc32c67ed"
+    },
+    {
+      "path": "COMPATIBILITY.md",
+      "bytes": 1145,
+      "sha256": "83ee90a595c9734a64192aa07883035e155ba867c29a2ada7dabe5ef762927a6"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1328,
+      "sha256": "089f15e4fd4844783187e6271785803d4ee29b3aab61db260f0ba757db1967e4"
+    },
+    {
+      "path": "references/china.md",
+      "bytes": 2155,
+      "sha256": "a77bfcbbc689ce8d5b7ca807dbfe5dc8c91cc4413ecd336940ac22cf0b9c5ced"
+    },
+    {
+      "path": "references/clarification.md",
+      "bytes": 2861,
+      "sha256": "ff5b4976d3e6dd02bab15441673faa36c24168923d8be7e1b27842e1bdbdb892"
+    },
+    {
+      "path": "references/committee.md",
+      "bytes": 2104,
+      "sha256": "6a06e5f67c2a9b96dc8b20b89cef15b3ab604f5fe770ea8420b4d77e5542d700"
+    },
+    {
+      "path": "references/core.md",
+      "bytes": 6901,
+      "sha256": "c2e424206fff10b4e581ec29cc76e38c9f58072487da58ca7b1b53546f76f507"
+    },
+    {
+      "path": "references/diligence.md",
+      "bytes": 4040,
+      "sha256": "b99e16f8199d02bc7bd6c7304110386d4bbed6c410cd34aea7213fca866ab87b"
+    },
+    {
+      "path": "references/esg-energy.md",
+      "bytes": 3243,
+      "sha256": "7c13195f2bbbcb71a8199068b9e4d0bcee0c26392ca74e991f70f573cd6a81a1"
+    },
+    {
+      "path": "references/esg-health.md",
+      "bytes": 3766,
+      "sha256": "7d731610803466055f12f15b4c1157bf58e371e139ee1e170d57b3156feac9d3"
+    },
+    {
+      "path": "references/esg-materials.md",
+      "bytes": 3212,
+      "sha256": "11e0774a57503c58ba434cdd63478d3f665f64850a7f392efb0ff1acc996b972"
+    },
+    {
+      "path": "references/esg-semi.md",
+      "bytes": 3557,
+      "sha256": "40a1dbda4b8af573a7a5c5b81eca89bf52bcdb2e75f69441505dec802f7041e8"
+    },
+    {
+      "path": "references/esg-software.md",
+      "bytes": 3326,
+      "sha256": "f8231d71410f006a305d8c6656e7a14a7679da050f967e6c549626a4512b787e"
+    },
+    {
+      "path": "references/esg-sources.md",
+      "bytes": 8186,
+      "sha256": "297a8df1597ecc243487eed9eb96544753f05f071fb8c1fc82d51c75fc388d6b"
+    },
+    {
+      "path": "references/esg.md",
+      "bytes": 7404,
+      "sha256": "83579cecc058fd4f123a8a253b79227ef3a95ac76dd3e29d9b5307c7ecc859f5"
+    },
+    {
+      "path": "references/evidence.md",
+      "bytes": 5930,
+      "sha256": "54ce364bfe3cc7a0ac185f4725eeb0897576f98c5568133db45c3b3fed966c74"
+    },
+    {
+      "path": "references/finance.md",
+      "bytes": 7360,
+      "sha256": "152ffbc3dba1b5340af0b309a5b061018f6d550132f458286c344b86a9146bcd"
+    },
+    {
+      "path": "references/key-rules.json",
+      "bytes": 14505,
+      "sha256": "902216eca9b4873ae850b1108ff7d166f07b51b822e2a9778d3b089d63793bbc"
+    },
+    {
+      "path": "references/monitoring.md",
+      "bytes": 2877,
+      "sha256": "73e4f90e5e6071c728f739f3337a7a078f3408596e9608e56c6754e148d37dad"
+    },
+    {
+      "path": "references/output-schema.json",
+      "bytes": 4681,
+      "sha256": "eed4b2e3e073c7c02728e5202f9fd0e009d01f8dcb21bee994c87230db68c5ee"
+    },
+    {
+      "path": "references/output.md",
+      "bytes": 16525,
+      "sha256": "cea376df95868252f8572c25d461d1ad31895938f4df5cabc51d71c37ac2e85d"
+    },
+    {
+      "path": "references/review.md",
+      "bytes": 3591,
+      "sha256": "4cced4d52e1f3af3725b4d2b22b1c46aae2b8af928e422f7b0973ad16216f5ed"
+    },
+    {
+      "path": "references/screening.md",
+      "bytes": 2962,
+      "sha256": "78cb5e8d6c634c58af593af126ead4b4ae0c19510d61e25cb18027c294175dca"
+    },
+    {
+      "path": "references/valuation.md",
+      "bytes": 3693,
+      "sha256": "75d15c5a48beda23930dfd16b5f3d9901c1a4baafdea5f0e09f78abf5df80cae"
+    },
+    {
+      "path": "references/writing.md",
+      "bytes": 3404,
+      "sha256": "b1b1bcd88b4ac18177de35e1d834cdb258b7e3b1f054a0457a8c4ce25dd5d580"
+    },
+    {
+      "path": "scripts/build_output.py",
+      "bytes": 15230,
+      "sha256": "5bc4b429c9a418cedb0c69d8f8b7f910565228a4d2759ae0594a4fcb565f21f3"
+    },
+    {
+      "path": "scripts/build_prompt.py",
+      "bytes": 1750,
+      "sha256": "23bd1c2cb463c8ae095b23844196568ab5d21b6bd870039840e55f35b2a65be4"
+    },
+    {
+      "path": "scripts/build_rules.py",
+      "bytes": 1656,
+      "sha256": "72c82634e88d5f1b33b8e65f656868639cc6bf23f522b8c8d92051097a91b4b4"
+    },
+    {
+      "path": "scripts/calc.py",
+      "bytes": 6058,
+      "sha256": "8b84fe79efc28c58730e444d4611780cf5e557629c713409b8da041e9ace8e3e"
+    },
+    {
+      "path": "scripts/check_output.py",
+      "bytes": 8649,
+      "sha256": "e7a16ef2f16f648529a5f7bdd6a78ef20413a5a6b53c34afc421e62789452f1f"
+    },
+    {
+      "path": "scripts/test_output.py",
+      "bytes": 8376,
+      "sha256": "29db0d1a3addd67ba4e8f80a7d212e1b72a8b15e8a8ed770a6b1fb2cd543cb7a"
+    },
+    {
+      "path": "scripts/validate.py",
+      "bytes": 8989,
+      "sha256": "7df8ef255c2c5dc10056644157ddba3f02d0b725b48f4ab31007503b8cae5707"
+    },
+    {
+      "path": "SKILL.md",
+      "bytes": 16543,
+      "sha256": "8cb9b13c8305fcf683b9dfe45dfb3ffbc1c84ea81b6b440e74798d8536fd967b"
+    },
+    {
+      "path": "SOURCE_INVENTORY.md",
+      "bytes": 2349,
+      "sha256": "fc79269bda7c51e250f87b8740a5056f5af17b099d54d74e9a7049020e5dc88f"
+    },
+    {
+      "path": "STANDALONE_PROMPT.md",
+      "bytes": 109505,
+      "sha256": "b4ab13f5d4cac06460149e1172d2bb6549a8601f63166e6407fdd7360ae191b5"
+    },
+    {
+      "path": "tests/AUTHOR_REVIEW.md",
+      "bytes": 247,
+      "sha256": "6436df4685180547118e690759c3ebeffb772ff502d35478e0550a850cd16912"
+    },
+    {
+      "path": "tests/behavior-review.md",
+      "bytes": 7848,
+      "sha256": "058787d46a9de6a7f638bcf898e5a593aadfea8b3669f410477a783c00f4cad8"
+    },
+    {
+      "path": "tests/calc_cases.json",
+      "bytes": 3665,
+      "sha256": "d501aa167fe16b3e999366e45c566aef6802b9b10f2cf935f44de77d3891aff4"
+    },
+    {
+      "path": "tests/fixtures/anonymous-case.json",
+      "bytes": 1395,
+      "sha256": "8ea10e7f709d86088d9a8cefb639b9b6d17a222c81e9f5a1e38d3acb74092f2a"
+    },
+    {
+      "path": "tests/fixtures/report-brief.md",
+      "bytes": 3608,
+      "sha256": "3a3095b47ee7b4ddd7829cfc9fe3722c9f04393bd0237a25702bbe9c1f8e9bc3"
+    },
+    {
+      "path": "tests/fixtures/report-comprehensive.md",
+      "bytes": 17940,
+      "sha256": "5809d591773ba03dd094c0bf67accd778c900327821150a5e72cb4e9c3dff0e9"
+    },
+    {
+      "path": "tests/fixtures/report-detailed.md",
+      "bytes": 16619,
+      "sha256": "5c5b2f9fa612daf1afcdc55144398991e84b9dec7e6334d96a16a93c28793309"
+    },
+    {
+      "path": "tests/output-checker-results.json",
+      "bytes": 11549,
+      "sha256": "99eafecaff1478a020e8c6f26da59d503c3be2bca94bbfa7cff573e17bbf4cd0"
+    },
+    {
+      "path": "tests/prompts.json",
+      "bytes": 47369,
+      "sha256": "9c15fe84ecaafbe2a4f5b50e6de2ad897384b4867fb9cec403f7553886da7caf"
+    },
+    {
+      "path": "tests/README.md",
+      "bytes": 1279,
+      "sha256": "c37326b23c015405b934cab08892f9c062f60f8968c32e4211acb6990289c13f"
+    },
+    {
+      "path": "tests/results.json",
+      "bytes": 16146,
+      "sha256": "488f87b9252b339f8045db23706cc1b5dddb5291cc9f1177885745d684a2faab"
+    },
+    {
+      "path": "tests/rubric.json",
+      "bytes": 19429,
+      "sha256": "4a27215dc5350ac70d723de1dd2ddf405092d926a18d4060e39cebd2b2c895f0"
+    },
+    {
+      "path": "tests/structural-results.json",
+      "bytes": 15243,
+      "sha256": "f38ca9bd25d81d9c1893a2b066155aa68a993a1de8fbf159d0da4c18a40c54d3"
+    },
+    {
+      "path": "tests/TEST_REPORT.md",
+      "bytes": 632,
+      "sha256": "dd470847075436234d880810aa8d6ad1d0e8894193c20867a6a82c1b475b5a33"
+    }
+  ]
+}

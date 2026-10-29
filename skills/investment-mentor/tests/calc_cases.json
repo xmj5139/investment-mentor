@@ -1,0 +1,186 @@
+[
+  {
+    "input": {
+      "op": "growth",
+      "base": 350,
+      "end": 980
+    },
+    "expected": {
+      "ratio": 2.8,
+      "growth_rate": 1.8
+    }
+  },
+  {
+    "input": {
+      "op": "growth",
+      "base": 0,
+      "end": 980
+    },
+    "expected": "error"
+  },
+  {
+    "input": {
+      "op": "profit_check",
+      "revenue": 86000,
+      "gross_margin": 0.48,
+      "research": 30000,
+      "admin": 7800,
+      "selling": 3600,
+      "reported_pretax": 86,
+      "margin_rounding_step": 0.01
+    },
+    "expected": {
+      "displayed_simple_result": -120,
+      "unexplained_difference": 206
+    }
+  },
+  {
+    "input": {
+      "op": "cash_budget",
+      "opening_available_cash": 24,
+      "minimum_cash": 4,
+      "periods": [
+        {
+          "period": "1",
+          "operating_net": -6,
+          "investing_net": 0,
+          "financing_net": 0,
+          "other_net": 0
+        },
+        {
+          "period": "2",
+          "operating_net": -5,
+          "investing_net": 0,
+          "financing_net": 0,
+          "other_net": 0
+        },
+        {
+          "period": "3",
+          "operating_net": -7,
+          "investing_net": 0,
+          "financing_net": 0,
+          "other_net": 0
+        }
+      ]
+    },
+    "expected": {
+      "lowest_cash": 6,
+      "additional_cash_to_floor": 0
+    }
+  },
+  {
+    "input": {
+      "op": "cash_budget",
+      "opening_available_cash": 12,
+      "minimum_cash": 3,
+      "periods": [
+        {
+          "period": "1",
+          "operating_net": -5,
+          "investing_net": 0,
+          "financing_net": 0,
+          "other_net": 0
+        },
+        {
+          "period": "2",
+          "operating_net": -7,
+          "investing_net": 0,
+          "financing_net": 0,
+          "other_net": 0
+        }
+      ]
+    },
+    "expected": {
+      "lowest_cash": 0,
+      "additional_cash_to_floor": 3
+    }
+  },
+  {
+    "input": {
+      "op": "exit_return",
+      "invested": 1200,
+      "exit_equity": 30000,
+      "stake": 0.12,
+      "stake_basis": "current",
+      "retention": 0.75,
+      "years": 5,
+      "investor_cost_tax": 0
+    },
+    "expected": {
+      "exit_stake": 0.09,
+      "net_exit_cash": 2700,
+      "moic": 2.25
+    }
+  },
+  {
+    "input": {
+      "op": "exit_return",
+      "invested": 1200,
+      "exit_equity": 30000,
+      "stake": 0.09,
+      "stake_basis": "exit",
+      "retention": 0.75,
+      "years": 5,
+      "investor_cost_tax": 0
+    },
+    "expected": "error"
+  },
+  {
+    "input": {
+      "op": "price_limit",
+      "exit_equity": 96000,
+      "retention": 0.75,
+      "target_moic": 3,
+      "annual_return": 0.25,
+      "years": 5
+    },
+    "expected": {
+      "moic_post_money_limit": 24000,
+      "irr_post_money_limit": 23592.96,
+      "joint_post_money_limit": 23592.96
+    }
+  },
+  {
+    "input": {
+      "op": "price_limit",
+      "exit_equity": 96000,
+      "retention": 0.75
+    },
+    "expected": "error"
+  },
+  {
+    "input": {
+      "op": "interval_divide",
+      "low": 760,
+      "high": 880,
+      "denominator": 1100
+    },
+    "expected": {
+      "interval": [
+        0.6909090909090909,
+        0.8
+      ]
+    }
+  },
+  {
+    "input": {
+      "op": "growth",
+      "base": true,
+      "end": 980
+    },
+    "expected": "error"
+  },
+  {
+    "input": {
+      "op": "cash_budget",
+      "opening_available_cash": 24,
+      "minimum_cash": 4,
+      "periods": [
+        {
+          "operating_net": -6
+        }
+      ]
+    },
+    "expected": "error"
+  }
+]

@@ -1,0 +1,458 @@
+{
+  "structural_pass": true,
+  "files": 50,
+  "local_links_checked": 90,
+  "anonymous_cases": 70,
+  "standalone_characters": 44840,
+  "calculator_results": [
+    {
+      "fixture": 1,
+      "passed": true,
+      "rejected_invalid_input": false
+    },
+    {
+      "fixture": 2,
+      "passed": true,
+      "rejected_invalid_input": true
+    },
+    {
+      "fixture": 3,
+      "passed": true,
+      "rejected_invalid_input": false
+    },
+    {
+      "fixture": 4,
+      "passed": true,
+      "rejected_invalid_input": false
+    },
+    {
+      "fixture": 5,
+      "passed": true,
+      "rejected_invalid_input": false
+    },
+    {
+      "fixture": 6,
+      "passed": true,
+      "rejected_invalid_input": false
+    },
+    {
+      "fixture": 7,
+      "passed": true,
+      "rejected_invalid_input": true
+    },
+    {
+      "fixture": 8,
+      "passed": true,
+      "rejected_invalid_input": false
+    },
+    {
+      "fixture": 9,
+      "passed": true,
+      "rejected_invalid_input": true
+    },
+    {
+      "fixture": 10,
+      "passed": true,
+      "rejected_invalid_input": false
+    },
+    {
+      "fixture": 11,
+      "passed": true,
+      "rejected_invalid_input": true
+    },
+    {
+      "fixture": 12,
+      "passed": true,
+      "rejected_invalid_input": true
+    }
+  ],
+  "reference_urls": [
+    "https://hq.mof.gov.cn/tongzhitonggao/202510/t20251030_3975237.htm",
+    "https://kjs.mof.gov.cn/zhengcefabu/202509/t20250912_3972190.htm",
+    "https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=A3D90E7A6E56FD97E106F29F0905A2F0",
+    "https://www.cac.gov.cn/2023-07/13/c_1690898327029107.htm",
+    "https://www.cac.gov.cn/2025-03/14/c_1743654684782215.htm",
+    "https://www.ifrs.org/issued-standards/sasb-standards/understanding-sasb-standards/",
+    "https://www.mee.gov.cn/xxgk2018/xxgk/xxgk02/202404/t20240408_1070139.html",
+    "https://www.mee.gov.cn/ywgz/fgbz/bz/bzwb/shjbh/swrwpfbz/202012/t20201223_814443.shtml",
+    "https://www.mee.gov.cn/ywgz/fgbz/xzfg/202101/t20210129_819519.shtml",
+    "https://www.mee.gov.cn/zcwj/gwywj/202610/t20261010_1175967.shtml",
+    "https://www.samr.gov.cn/tzsbj/zcfg/flfg/art/2021/art_d8ec5ba871464b49bfd0a0275bb57756.html",
+    "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/bgt/art/2026/art_4e160e51cc134696a183a5f531f097e5.html",
+    "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/fgs/art/2023/art_70607fc4160041a383e68ff6bfb2826f.html",
+    "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/fgs/art/2023/art_d7040b9f1d0f4980a0e55089a57bf37d.html",
+    "https://ypjg.ln.gov.cn/ypjg/zwgk/flfg/zcjd/EC143FD7C4374A2C86E76DB42118D2AA/index.shtml"
+  ],
+  "mechanical_checker_tests": {
+    "kind": "unit tests of mechanical checker, not agent runs",
+    "tests": [
+      {
+        "test": "brief_complete",
+        "expected_mechanical_pass": true,
+        "observed_mechanical_pass": true,
+        "checker_test_passed": true,
+        "observed_errors": []
+      },
+      {
+        "test": "detailed_complete",
+        "expected_mechanical_pass": true,
+        "observed_mechanical_pass": true,
+        "checker_test_passed": true,
+        "observed_errors": []
+      },
+      {
+        "test": "comprehensive_complete",
+        "expected_mechanical_pass": true,
+        "observed_mechanical_pass": true,
+        "checker_test_passed": true,
+        "observed_errors": []
+      },
+      {
+        "test": "numbered_metadata_preserves_six_fields",
+        "expected_mechanical_pass": true,
+        "observed_mechanical_pass": true,
+        "checker_test_passed": true,
+        "observed_errors": []
+      },
+      {
+        "test": "typographic_heading_spaces",
+        "expected_mechanical_pass": true,
+        "observed_mechanical_pass": true,
+        "checker_test_passed": true,
+        "observed_errors": []
+      },
+      {
+        "test": "display_emphasis_preserves_labels",
+        "expected_mechanical_pass": true,
+        "observed_mechanical_pass": true,
+        "checker_test_passed": true,
+        "observed_errors": []
+      },
+      {
+        "test": "missing_top_layer",
+        "expected_mechanical_pass": false,
+        "observed_mechanical_pass": false,
+        "checker_test_passed": true,
+        "observed_errors": [
+          "一级标题缺失、增添或顺序不符",
+          "缺少指定表头：关键证据"
+        ]
+      },
+      {
+        "test": "top_order_changed",
+        "expected_mechanical_pass": false,
+        "observed_mechanical_pass": false,
+        "checker_test_passed": true,
+        "observed_errors": [
+          "一级标题缺失、增添或顺序不符",
+          "简报字段缺失或重复：企业定义",
+          "简报字段缺失或重复：当前价值成长阶段",
+          "简报字段缺失或重复：当前投资倾向",
+          "简报字段缺失或重复：当前资本价值点",
+          "简报字段缺失或重复：当前核心风险",
+          "简报字段缺失或重复：下一阶段关键证据",
+          "结构化项目画像二级标题缺失、增添或顺序不符",
+          "缺少指定表头：9视角",
+          "缺少指定表头：12维",
+          "缺少指定表头：五层验证",
+          "缺少指定表头：补证问题",
+          "ESG六个三级标题缺失、增添或顺序不符"
+        ]
+      },
+      {
+        "test": "missing_metadata_field",
+        "expected_mechanical_pass": false,
+        "observed_mechanical_pass": false,
+        "checker_test_passed": true,
+        "observed_errors": [
+          "报告信息字段缺失或重复：任务与研究范围"
+        ]
+      },
+      {
+        "test": "missing_brief_field",
+        "expected_mechanical_pass": false,
+        "observed_mechanical_pass": false,
+        "checker_test_passed": true,
+        "observed_errors": [
+          "简报字段缺失或重复：当前投资倾向"
+        ]
+      },
+      {
+        "test": "missing_profile_section",
+        "expected_mechanical_pass": false,
+        "observed_mechanical_pass": false,
+        "checker_test_passed": true,
+        "observed_errors": [
+          "结构化项目画像二级标题缺失、增添或顺序不符"
+        ]
+      },
+      {
+        "test": "profile_order_changed",
+        "expected_mechanical_pass": false,
+        "observed_mechanical_pass": false,
+        "checker_test_passed": true,
+        "observed_errors": [
+          "结构化项目画像二级标题缺失、增添或顺序不符"
+        ]
+      },
+      {
+        "test": "missing_view_row",
+        "expected_mechanical_pass": false,
+        "observed_mechanical_pass": false,
+        "checker_test_passed": true,
+        "observed_errors": [
+          "必备行缺失、重复或名称不符：9视角"
+        ]
+      },
+      {
+        "test": "duplicate_view_row",
+        "expected_mechanical_pass": false,
+        "observed_mechanical_pass": false,
+        "checker_test_passed": true,
+        "observed_errors": [
+          "必备行缺失、重复或名称不符：9视角"
+        ]
+      },
+      {
+        "test": "missing_dimension_row",
+        "expected_mechanical_pass": false,
+        "observed_mechanical_pass": false,
+        "checker_test_passed": true,
+        "observed_errors": [
+          "必备行缺失、重复或名称不符：12维"
+        ]
+      },
+      {
+        "test": "dp_layer_missing",
+        "expected_mechanical_pass": false,
+        "observed_mechanical_pass": false,
+        "checker_test_passed": true,
+        "observed_errors": [
+          "价值点五层不全或重复：设备复购的持续价值"
+        ]
+      },
+      {
+        "test": "dp_layer_duplicated",
+        "expected_mechanical_pass": false,
+        "observed_mechanical_pass": false,
+        "checker_test_passed": true,
+        "observed_errors": [
+          "价值点五层不全或重复：设备复购的持续价值"
+        ]
+      },
+      {
+        "test": "placeholder_only_section",
+        "expected_mechanical_pass": false,
+        "observed_mechanical_pass": false,
+        "checker_test_passed": true,
+        "observed_errors": [
+          "栏目无实质文本：当前核心风险与否决条件"
+        ]
+      },
+      {
+        "test": "table_only_explanation",
+        "expected_mechanical_pass": false,
+        "observed_mechanical_pass": false,
+        "checker_test_passed": true,
+        "observed_errors": [
+          "正文栏目缺少完整说明句，不能只有表格/标签：当前资本价值点与支撑条件"
+        ]
+      },
+      {
+        "test": "missing_appendix_section",
+        "expected_mechanical_pass": false,
+        "observed_mechanical_pass": false,
+        "checker_test_passed": true,
+        "observed_errors": [
+          "专家附录二级标题缺失、增添或顺序不符"
+        ]
+      },
+      {
+        "test": "wrong_declared_depth",
+        "expected_mechanical_pass": false,
+        "observed_mechanical_pass": false,
+        "checker_test_passed": true,
+        "observed_errors": [
+          "报告档位/技能版本缺失或与检查参数不符",
+          "结构化项目画像二级标题缺失、增添或顺序不符",
+          "专家附录二级标题缺失、增添或顺序不符",
+          "简版缺少或重复ESG三级标题"
+        ]
+      },
+      {
+        "test": "wrong_evidence_header",
+        "expected_mechanical_pass": false,
+        "observed_mechanical_pass": false,
+        "checker_test_passed": true,
+        "observed_errors": [
+          "缺少指定表头：关键证据"
+        ]
+      },
+      {
+        "test": "explicit_dp_waiver",
+        "expected_mechanical_pass": true,
+        "observed_mechanical_pass": true,
+        "checker_test_passed": true,
+        "observed_errors": []
+      },
+      {
+        "test": "incomplete_waiver",
+        "expected_mechanical_pass": false,
+        "observed_mechanical_pass": false,
+        "checker_test_passed": true,
+        "observed_errors": [
+          "缺口/不适用说明缺少所需证据：DP五层纵向验证结果"
+        ]
+      },
+      {
+        "test": "esg_hierarchical_numbering",
+        "expected_mechanical_pass": true,
+        "observed_mechanical_pass": true,
+        "checker_test_passed": true,
+        "observed_errors": []
+      },
+      {
+        "test": "brief_ascii_esg_labels",
+        "expected_mechanical_pass": true,
+        "observed_mechanical_pass": true,
+        "checker_test_passed": true,
+        "observed_errors": []
+      },
+      {
+        "test": "unambiguous_dp_same_as_above",
+        "expected_mechanical_pass": true,
+        "observed_mechanical_pass": true,
+        "checker_test_passed": true,
+        "observed_errors": []
+      },
+      {
+        "test": "dp_inheritance_without_prior",
+        "expected_mechanical_pass": false,
+        "observed_mechanical_pass": false,
+        "checker_test_passed": true,
+        "observed_errors": [
+          "五层对象承接无前项",
+          "价值点五层不全或重复：同上",
+          "价值点五层不全或重复：设备复购的持续价值"
+        ]
+      },
+      {
+        "test": "esg_section_removed",
+        "expected_mechanical_pass": false,
+        "observed_mechanical_pass": false,
+        "checker_test_passed": true,
+        "observed_errors": [
+          "结构化项目画像二级标题缺失、增添或顺序不符",
+          "ESG六个三级标题缺失、增添或顺序不符"
+        ]
+      },
+      {
+        "test": "esg_subheading_removed",
+        "expected_mechanical_pass": false,
+        "observed_mechanical_pass": false,
+        "checker_test_passed": true,
+        "observed_errors": [
+          "ESG六个三级标题缺失、增添或顺序不符"
+        ]
+      },
+      {
+        "test": "esg_subheadings_reordered",
+        "expected_mechanical_pass": false,
+        "observed_mechanical_pass": false,
+        "checker_test_passed": true,
+        "observed_errors": [
+          "ESG六个三级标题缺失、增添或顺序不符"
+        ]
+      },
+      {
+        "test": "esg_empty_subsection",
+        "expected_mechanical_pass": false,
+        "observed_mechanical_pass": false,
+        "checker_test_passed": true,
+        "observed_errors": [
+          "ESG子节缺少完整说明：治理情况（G）"
+        ]
+      },
+      {
+        "test": "brief_esg_removed",
+        "expected_mechanical_pass": false,
+        "observed_mechanical_pass": false,
+        "checker_test_passed": true,
+        "observed_errors": [
+          "简版缺少或重复ESG三级标题"
+        ]
+      },
+      {
+        "test": "brief_esg_missing_governance",
+        "expected_mechanical_pass": false,
+        "observed_mechanical_pass": false,
+        "checker_test_passed": true,
+        "observed_errors": [
+          "简版ESG未标明治理范围"
+        ]
+      },
+      {
+        "test": "diligence_explicit_specialized",
+        "expected_mechanical_pass": true,
+        "observed_mechanical_pass": true,
+        "checker_test_passed": true,
+        "observed_errors": []
+      },
+      {
+        "test": "valuation_explicit_specialized",
+        "expected_mechanical_pass": true,
+        "observed_mechanical_pass": true,
+        "checker_test_passed": true,
+        "observed_errors": []
+      },
+      {
+        "test": "committee_explicit_specialized",
+        "expected_mechanical_pass": true,
+        "observed_mechanical_pass": true,
+        "checker_test_passed": true,
+        "observed_errors": []
+      },
+      {
+        "test": "monitoring_explicit_specialized",
+        "expected_mechanical_pass": true,
+        "observed_mechanical_pass": true,
+        "checker_test_passed": true,
+        "observed_errors": []
+      }
+    ],
+    "tests_total": 38,
+    "tests_passed": 38,
+    "all_checker_tests_passed": true,
+    "author_fixture_arithmetic": {
+      "unit": "万元",
+      "cash_endings": [
+        60.0,
+        30.0
+      ],
+      "post_money": 2000.0,
+      "current_stake": 0.1,
+      "exit_stake": 0.08,
+      "scenario_distributions": [
+        400.0,
+        120.0,
+        560.0
+      ],
+      "scenario_moics": [
+        2.0,
+        0.6,
+        2.8
+      ],
+      "scenario_annual_returns": [
+        0.18920711500272103,
+        -0.11988826320660662,
+        0.29356872761680153
+      ],
+      "analysis_fcf": 100.0,
+      "scope": "Independent arithmetic of author fixture; not real inputs or model behavior."
+    },
+    "limits": "Positive fixtures are author-constructed; this does not test model obedience, factual accuracy, prose fluency or investment quality."
+  },
+  "rule_contract_kind": "literal presence and shared generation only; not behavior grading",
+  "errors": [],
+  "limits": "Structure, exact prompt generation and real calculator executions only; not model behavior, external facts or native discovery."
+}

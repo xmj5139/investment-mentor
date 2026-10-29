@@ -1,0 +1,48 @@
+{
+  "kind": "anonymous_author_constructed_fixture_not_a_model_run",
+  "scope": "明确离线、仅按给定合成题，不代表现实核验或投资批准",
+  "facts": {
+    "company": "匿名设备甲",
+    "business": "工业检测设备销售与维护",
+    "paying_repeat_customers": 3,
+    "customers_independent": true,
+    "repeat_purchase_cycles": 2,
+    "revenue_2024": 1500,
+    "revenue_2025": 2000,
+    "gross_margin_2025": 0.35,
+    "operating_cash_2025": 260,
+    "cash_capex_2025": 160,
+    "unit": "万元"
+  },
+  "budget": {
+    "opening_available_cash": 80,
+    "monthly_operating_net": [
+      -20,
+      -30
+    ],
+    "other_cash_flows": 0,
+    "minimum_cash": 10,
+    "no_intraperiod_extra_payments": true,
+    "milestone": "第二月末完成下一客户验证节点"
+  },
+  "scenario": {
+    "pre_money": 1600,
+    "all_new_cash": 400,
+    "investor_cash": 200,
+    "retention_to_exit": 0.8,
+    "years": 4,
+    "exit_equity_base": 5000,
+    "exit_equity_down": 1500,
+    "exit_equity_up": 7000,
+    "target_moic_in_this_fixture_only": 2,
+    "ordinary_equal_rights": true,
+    "old_shares_options_debt_fees_interim_cashflows": false
+  },
+  "unknown": [
+    "分客户收入和复购结构",
+    "独立性能/竞品测试",
+    "IP与任职原始文件",
+    "历史经营现金流与未来负流预算的调节",
+    "现实报价、退出买方和市场共识"
+  ]
+}

@@ -1,0 +1,491 @@
+{
+  "version": "0.4.5",
+  "date": "2026-10-27",
+  "status": "completed_with_limitations",
+  "completed_answers": 17,
+  "actual_final_answers_by_environment": {
+    "codebuddy": {
+      "completed_answers": 3,
+      "attempt_statuses": {
+        "completed": 3,
+        "schedule_changed_before_inference": 1,
+        "not_run_after_schedule_change": 8
+      }
+    },
+    "codebuddy-medium": {
+      "completed_answers": 7,
+      "attempt_statuses": {
+        "timeout": 2,
+        "completed": 7,
+        "not_run_after_pair_failure": 1
+      }
+    },
+    "dsh": {
+      "completed_answers": 3,
+      "attempt_statuses": {
+        "completed": 3
+      }
+    },
+    "kimi": {
+      "completed_answers": 3,
+      "attempt_statuses": {
+        "completed": 3
+      }
+    },
+    "codex": {
+      "completed_answers": 1,
+      "attempt_statuses": {
+        "completed": 1
+      }
+    }
+  },
+  "format_results": {
+    "codebuddy/bilingual-v045": {
+      "passed": 0,
+      "checked": 1,
+      "cases": [
+        "J02"
+      ]
+    },
+    "codebuddy-medium/baseline-v044": {
+      "passed": 1,
+      "checked": 1,
+      "cases": [
+        "J03"
+      ]
+    },
+    "codebuddy-medium/bilingual-v045": {
+      "passed": 1,
+      "checked": 2,
+      "cases": [
+        "J02",
+        "J03"
+      ]
+    },
+    "dsh/bilingual-v045": {
+      "passed": 0,
+      "checked": 2,
+      "cases": [
+        "J02",
+        "J05"
+      ]
+    },
+    "kimi/bilingual-v045": {
+      "passed": 0,
+      "checked": 2,
+      "cases": [
+        "J02",
+        "J05"
+      ]
+    },
+    "codex/bilingual-v045": {
+      "passed": 1,
+      "checked": 1,
+      "cases": [
+        "J05"
+      ]
+    }
+  },
+  "paired_codebuddy_cases": [
+    {
+      "case": "J01",
+      "effort": "not_overridden",
+      "baseline": {
+        "engine": "codebuddy",
+        "variant": "baseline-v044",
+        "case": "J01",
+        "status": "completed",
+        "runner_exit_code": 0,
+        "harness_elapsed_seconds": 302.34,
+        "input_sha256": "bc209b76a6e85ff0eb3d891d5588f567df73e10a0c2710f88ee34754f65af3db",
+        "final_sha256": "d039f72208cdba23bc3cb188b70ee29ea1a86ea1d712db3d449530f5fee15f55",
+        "final_characters": 1252,
+        "requested_effort": null,
+        "final_present": true,
+        "usage": {
+          "input_tokens": 29042,
+          "output_tokens": 6959,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": null,
+          "server_tool_use": null,
+          "service_tier": null
+        },
+        "model_aliases": [
+          "Hy4 preview",
+          "hy4-preview"
+        ],
+        "final_sha256_verified": true,
+        "format": {
+          "mechanical_contract_pass": null,
+          "scope": "Short questions; full report is not required",
+          "top_heading_count": 0
+        },
+        "sample_contains_reasoning_tag": false
+      },
+      "bilingual": {
+        "engine": "codebuddy",
+        "variant": "bilingual-v045",
+        "case": "J01",
+        "status": "completed",
+        "runner_exit_code": 0,
+        "harness_elapsed_seconds": 50.47,
+        "input_sha256": "92cae9661bb8904ceec2be45ce71f9a1abe9ad369f280d55b092a11e3bf58731",
+        "final_sha256": "725c646cf66c93760cb52a06243416ea1864f4641d4f5b6fb7805a553a4110a8",
+        "final_characters": 1379,
+        "requested_effort": null,
+        "final_present": true,
+        "usage": {
+          "input_tokens": 30468,
+          "output_tokens": 3502,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 256,
+          "cache_creation": null,
+          "server_tool_use": null,
+          "service_tier": null
+        },
+        "model_aliases": [
+          "Hy4 preview",
+          "hy4-preview"
+        ],
+        "final_sha256_verified": true,
+        "format": {
+          "mechanical_contract_pass": null,
+          "scope": "Short questions; full report is not required",
+          "top_heading_count": 0
+        },
+        "sample_contains_reasoning_tag": false
+      },
+      "both_completed": true
+    },
+    {
+      "case": "J02",
+      "effort": "requested_medium",
+      "baseline": {
+        "engine": "codebuddy-medium",
+        "variant": "baseline-v044",
+        "case": "J02",
+        "status": "timeout",
+        "runner_exit_code": 1,
+        "harness_elapsed_seconds": 600.31,
+        "input_sha256": "58d67519fa5183a316724b7ae42a5c4203e8ea5def00ca6fb16066e4dee18459",
+        "final_sha256": null,
+        "final_characters": null,
+        "requested_effort": "medium",
+        "final_present": false,
+        "usage": null,
+        "model_aliases": "unknown"
+      },
+      "bilingual": {
+        "engine": "codebuddy-medium",
+        "variant": "bilingual-v045",
+        "case": "J02",
+        "status": "completed",
+        "runner_exit_code": 0,
+        "harness_elapsed_seconds": 333.03,
+        "input_sha256": "223b86ad79915fb48d32b954f90e59a3a9dfdf67a587a48ee1a8d57e25b901f4",
+        "final_sha256": "347958f73f7edb3e94fec0ba07c70e05c59d8805060b37537d4b77d250af52c8",
+        "final_characters": 14812,
+        "requested_effort": "medium",
+        "final_present": true,
+        "usage": {
+          "input_tokens": 30584,
+          "output_tokens": 19847,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": null,
+          "server_tool_use": null,
+          "service_tier": null
+        },
+        "model_aliases": [
+          "Hy4 preview",
+          "hy4-preview"
+        ],
+        "final_sha256_verified": true,
+        "format": {
+          "mechanical_contract_pass": false,
+          "depth": "detailed",
+          "task": "project",
+          "errors": [
+            "正文栏目缺少完整说明句，不能只有表格/标签：下一阶段关键验证问题",
+            "缺少指定表头：关键证据"
+          ],
+          "declared_waivers": [],
+          "limits": "Only Markdown titles/order, field presence, table shape and limited empty/prose checks. Does not verify facts, reasoning, authorized assumptions, completed tools, fluency or investment merit; human review required."
+        },
+        "sample_contains_reasoning_tag": false
+      },
+      "both_completed": false
+    },
+    {
+      "case": "J03",
+      "effort": "requested_medium",
+      "baseline": {
+        "engine": "codebuddy-medium",
+        "variant": "baseline-v044",
+        "case": "J03",
+        "status": "completed",
+        "runner_exit_code": 0,
+        "harness_elapsed_seconds": 579.33,
+        "input_sha256": "f0c844f450ca6ba81fd3407e30c2ab738f9fc0fad33ec0083011651c46fdea2c",
+        "final_sha256": "54cdaa9ff63a378eda224a40a24560e0bb6cf2b2187078b55bff50407af1f208",
+        "final_characters": 4275,
+        "requested_effort": "medium",
+        "final_present": true,
+        "usage": {
+          "input_tokens": 29066,
+          "output_tokens": 14820,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": null,
+          "server_tool_use": null,
+          "service_tier": null
+        },
+        "model_aliases": [
+          "Hy4 preview",
+          "hy4-preview"
+        ],
+        "final_sha256_verified": true,
+        "format": {
+          "mechanical_contract_pass": true,
+          "depth": "brief",
+          "task": "project",
+          "errors": [],
+          "declared_waivers": [],
+          "limits": "Only Markdown titles/order, field presence, table shape and limited empty/prose checks. Does not verify facts, reasoning, authorized assumptions, completed tools, fluency or investment merit; human review required."
+        },
+        "sample_contains_reasoning_tag": false
+      },
+      "bilingual": {
+        "engine": "codebuddy-medium",
+        "variant": "bilingual-v045",
+        "case": "J03",
+        "status": "completed",
+        "runner_exit_code": 0,
+        "harness_elapsed_seconds": 261.69,
+        "input_sha256": "1a389ee518650a9aaa6a8fe5a72c4ad5324429ce88ece3a4a6878a8c87d0b4c5",
+        "final_sha256": "447f249e053d30454bc63aa387ff1352beb6c07f8aa9283cd45512daf722c270",
+        "final_characters": 5746,
+        "requested_effort": "medium",
+        "final_present": true,
+        "usage": {
+          "input_tokens": 30493,
+          "output_tokens": 14567,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": null,
+          "server_tool_use": null,
+          "service_tier": null
+        },
+        "model_aliases": [
+          "Hy4 preview",
+          "hy4-preview"
+        ],
+        "final_sha256_verified": true,
+        "format": {
+          "mechanical_contract_pass": true,
+          "depth": "brief",
+          "task": "project",
+          "errors": [],
+          "declared_waivers": [],
+          "limits": "Only Markdown titles/order, field presence, table shape and limited empty/prose checks. Does not verify facts, reasoning, authorized assumptions, completed tools, fluency or investment merit; human review required."
+        },
+        "sample_contains_reasoning_tag": false
+      },
+      "both_completed": true
+    },
+    {
+      "case": "J04",
+      "effort": "requested_medium",
+      "baseline": {
+        "engine": "codebuddy-medium",
+        "variant": "baseline-v044",
+        "case": "J04",
+        "status": "completed",
+        "runner_exit_code": 0,
+        "harness_elapsed_seconds": 50.81,
+        "input_sha256": "ef0ce7d00782669f0d021c6740e062d510b721a3bdd5efbb34e0e34d1585bb70",
+        "final_sha256": "0e2f94d4125be0768714654709e3002b32bd1d4e6f83d00681f02d33362ee30d",
+        "final_characters": 1148,
+        "requested_effort": "medium",
+        "final_present": true,
+        "usage": {
+          "input_tokens": 29033,
+          "output_tokens": 2353,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": null,
+          "server_tool_use": null,
+          "service_tier": null
+        },
+        "model_aliases": [
+          "Hy4 preview",
+          "hy4-preview"
+        ],
+        "final_sha256_verified": true,
+        "format": {
+          "mechanical_contract_pass": null,
+          "scope": "Short questions; full report is not required",
+          "top_heading_count": 0
+        },
+        "sample_contains_reasoning_tag": false
+      },
+      "bilingual": {
+        "engine": "codebuddy-medium",
+        "variant": "bilingual-v045",
+        "case": "J04",
+        "status": "completed",
+        "runner_exit_code": 0,
+        "harness_elapsed_seconds": 87.92,
+        "input_sha256": "d61ec2374c6c97d1508b0f1ec3a90070977585543dd6aecc19710e8651fb414d",
+        "final_sha256": "b83c2b47a459dcebdfb30b7c6bbd28a0d3e942eeaeb6aa929cf8a86d3a733a30",
+        "final_characters": 1258,
+        "requested_effort": "medium",
+        "final_present": true,
+        "usage": {
+          "input_tokens": 30460,
+          "output_tokens": 2546,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": null,
+          "server_tool_use": null,
+          "service_tier": null
+        },
+        "model_aliases": [
+          "Hy4 preview",
+          "hy4-preview"
+        ],
+        "final_sha256_verified": true,
+        "format": {
+          "mechanical_contract_pass": null,
+          "scope": "Short questions; full report is not required",
+          "top_heading_count": 0
+        },
+        "sample_contains_reasoning_tag": false
+      },
+      "both_completed": true
+    },
+    {
+      "case": "J05",
+      "effort": "requested_medium",
+      "baseline": {
+        "engine": "codebuddy-medium",
+        "variant": "baseline-v044",
+        "case": "J05",
+        "status": "timeout",
+        "runner_exit_code": 1,
+        "harness_elapsed_seconds": 600.26,
+        "input_sha256": "3c57902f8138a66981030639f2ff0ef02d363c8d8a50eee75a8113245e1cad5b",
+        "final_sha256": null,
+        "final_characters": null,
+        "requested_effort": "medium",
+        "final_present": false,
+        "usage": null,
+        "model_aliases": "unknown"
+      },
+      "bilingual": {
+        "engine": "codebuddy-medium",
+        "variant": "bilingual-v045",
+        "case": "J05",
+        "status": "not_run_after_pair_failure",
+        "runner_exit_code": null,
+        "harness_elapsed_seconds": null,
+        "input_sha256": "5d24e23079fc3f9ccbcf534b0dab7edd97a28988bcb6786c80c2969c71a48413",
+        "final_sha256": null,
+        "final_characters": null,
+        "requested_effort": "medium",
+        "final_present": false,
+        "usage": null,
+        "model_aliases": "unknown"
+      },
+      "both_completed": false
+    },
+    {
+      "case": "J06",
+      "effort": "requested_medium",
+      "baseline": {
+        "engine": "codebuddy-medium",
+        "variant": "baseline-v044",
+        "case": "J06",
+        "status": "completed",
+        "runner_exit_code": 0,
+        "harness_elapsed_seconds": 59.72,
+        "input_sha256": "1e2ac59d9a02cca2165c7a849005df4e48604498a9611db3ab7a6501155b54a6",
+        "final_sha256": "56ba9e6a4442be196c4129f0b5c855f7c229c390b9997144e8649bd7728e4129",
+        "final_characters": 1118,
+        "requested_effort": "medium",
+        "final_present": true,
+        "usage": {
+          "input_tokens": 29005,
+          "output_tokens": 4264,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 2816,
+          "cache_creation": null,
+          "server_tool_use": null,
+          "service_tier": null
+        },
+        "model_aliases": [
+          "Hy4 preview",
+          "hy4-preview"
+        ],
+        "final_sha256_verified": true,
+        "format": {
+          "mechanical_contract_pass": null,
+          "scope": "Short questions; full report is not required",
+          "top_heading_count": 0
+        },
+        "sample_contains_reasoning_tag": false
+      },
+      "bilingual": {
+        "engine": "codebuddy-medium",
+        "variant": "bilingual-v045",
+        "case": "J06",
+        "status": "completed",
+        "runner_exit_code": 0,
+        "harness_elapsed_seconds": 131.7,
+        "input_sha256": "db3aa2e542da0167c3d1c5ce388764ef3f0b01adcb237161b5f99f3949e5fdcc",
+        "final_sha256": "eb5a11bde7af2d16053483075627448f08b47b3776cf6f07b38c3b00044cbc13",
+        "final_characters": 1265,
+        "requested_effort": "medium",
+        "final_present": true,
+        "usage": {
+          "input_tokens": 30433,
+          "output_tokens": 5513,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": null,
+          "server_tool_use": null,
+          "service_tier": null
+        },
+        "model_aliases": [
+          "Hy4 preview",
+          "hy4-preview"
+        ],
+        "final_sha256_verified": true,
+        "format": {
+          "mechanical_contract_pass": null,
+          "scope": "Short questions; full report is not required",
+          "top_heading_count": 0
+        },
+        "sample_contains_reasoning_tag": false
+      },
+      "both_completed": true
+    }
+  ],
+  "targeted_author_reviews": 17,
+  "independent_blind_expert_review": false,
+  "standalone_character_counts": {
+    "v044": 37242,
+    "v045": 44840,
+    "increase_percent": 20.4
+  },
+  "language_causal_benefit_established": false,
+  "native_skill_discovery_tested": false,
+  "public_online_verification_tested": false,
+  "installed_skills_modified": false,
+  "core_chinese_rules_preserved": 14,
+  "calculation_fixtures_passed": 12,
+  "mechanical_checker_unit_cases_passed": 38,
+  "remaining_model_behavior_issues": true,
+  "raw_final_answers_modified": false
+}
