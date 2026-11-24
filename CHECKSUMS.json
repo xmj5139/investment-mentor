@@ -1,7 +1,7 @@
 {
-  "skill_version": "0.4.5",
-  "packaging_date": "2026-10-29",
-  "status": "candidate_with_known_failures",
+  "skill_version": "0.5.0",
+  "packaging_date": "2026-11-24",
+  "status": "release",
   "files": [
     {
       "path": ".gitignore",
@@ -10,28 +10,28 @@
     },
     {
       "path": "CHANGELOG.md",
-      "bytes": 2236,
-      "sha256": "1b575657ace298f9398a05395c8d5c5a89c8e8ae4528e0b001da2705bb6d5de1"
+      "bytes": 3642,
+      "sha256": "cfc3f1c2586062efc85184b03c7b7caff3404f7ba10aa605700e849283a02255"
     },
     {
       "path": "docs/PACKAGING.md",
-      "bytes": 1246,
-      "sha256": "239c33335983f1b40c4809736bf3b43db87b010f156b23766d61941b1bd9c129"
+      "bytes": 1127,
+      "sha256": "43972a8608d27fb99f89029c448d8763cb981bbdabd9f2a4a4ba16e183e236ce"
     },
     {
       "path": "docs/ROADMAP.md",
-      "bytes": 2423,
-      "sha256": "2902708e73a94cfdd046774843196d182324525652e82b6a7dc642cc27ad8782"
+      "bytes": 2376,
+      "sha256": "283ee6576416484e2ff2ec198cfb3586deed08860adfbca4c2f783367d3822f0"
     },
     {
       "path": "docs/TESTING.md",
-      "bytes": 3771,
-      "sha256": "51c9bff9f078c11fedfc2fece79e6f658113d2cc4dea1167a3cf9fb7cde97315"
+      "bytes": 3963,
+      "sha256": "f34ee5ec2c39369352aa745b4641f8b618864380ddfd7ca0f34db0aaf1740f17"
     },
     {
       "path": "README.md",
-      "bytes": 3338,
-      "sha256": "66c6ed9656ac3e2b9ba5f2d86031864cf330ded265ea4a817e87de79cfaee7d0"
+      "bytes": 3236,
+      "sha256": "6afec371803b9dd7f4e7a34f945795dd0bcdfc63cc83f62e03db7af6cead050f"
     },
     {
       "path": "scripts/check_publication.py",
@@ -45,28 +45,28 @@
     },
     {
       "path": "skills/investment-mentor/CHANGELOG.md",
-      "bytes": 756,
-      "sha256": "3487347a4ce8380766dcde4122f06058f6b73658510ed852b148893dc32c67ed"
+      "bytes": 2162,
+      "sha256": "08a714c6faa260265e1a4c6efe309c0326406f7ecff0e13493a57ecd10a9cb9f"
     },
     {
       "path": "skills/investment-mentor/COMPATIBILITY.md",
-      "bytes": 1145,
-      "sha256": "83ee90a595c9734a64192aa07883035e155ba867c29a2ada7dabe5ef762927a6"
+      "bytes": 1251,
+      "sha256": "44e6a4cfab3a5cfbbe5b2528526244923f14a4242487472e6dcd4f31829d5c32"
     },
     {
       "path": "skills/investment-mentor/PACKAGE_MANIFEST.json",
-      "bytes": 7931,
-      "sha256": "8a0abbb267b057adccca0c8045ce9a6d7fd12e0975cbd7fd3afeae4f7a484270"
+      "bytes": 7990,
+      "sha256": "4c1c725f0f9906880841aa9372ef7319c6c98423458c4d6d663abc188f2be92a"
     },
     {
       "path": "skills/investment-mentor/README.md",
-      "bytes": 1328,
-      "sha256": "089f15e4fd4844783187e6271785803d4ee29b3aab61db260f0ba757db1967e4"
+      "bytes": 1988,
+      "sha256": "6cc1c4577c5041c2dbd8fec51e90448514d9bc978b06dd3806c19772cc5ee481"
     },
     {
       "path": "skills/investment-mentor/references/china.md",
-      "bytes": 2155,
-      "sha256": "a77bfcbbc689ce8d5b7ca807dbfe5dc8c91cc4413ecd336940ac22cf0b9c5ced"
+      "bytes": 3412,
+      "sha256": "a543c371b604705fdf9c34275a04cd70d5d83bf5b8115a02f794e9be0f409319"
     },
     {
       "path": "skills/investment-mentor/references/clarification.md",
@@ -85,8 +85,8 @@
     },
     {
       "path": "skills/investment-mentor/references/diligence.md",
-      "bytes": 4040,
-      "sha256": "b99e16f8199d02bc7bd6c7304110386d4bbed6c410cd34aea7213fca866ab87b"
+      "bytes": 4859,
+      "sha256": "d1678475b20f6fe8c25bbabb9dac18c6950ef2f41de0055f46bc8cf08afb3944"
     },
     {
       "path": "skills/investment-mentor/references/esg-energy.md",
@@ -135,8 +135,8 @@
     },
     {
       "path": "skills/investment-mentor/references/key-rules.json",
-      "bytes": 14505,
-      "sha256": "902216eca9b4873ae850b1108ff7d166f07b51b822e2a9778d3b089d63793bbc"
+      "bytes": 15068,
+      "sha256": "e4d64e924ae0582b547bfe82c1448dd56536784366a7dfc89ce035cc18c35239"
     },
     {
       "path": "skills/investment-mentor/references/monitoring.md",
@@ -145,23 +145,23 @@
     },
     {
       "path": "skills/investment-mentor/references/output-schema.json",
-      "bytes": 4681,
-      "sha256": "eed4b2e3e073c7c02728e5202f9fd0e009d01f8dcb21bee994c87230db68c5ee"
+      "bytes": 4700,
+      "sha256": "958c05dc6898c4987bd0b2740f2c53a19f562595b885e8f31104f463441ffe18"
     },
     {
       "path": "skills/investment-mentor/references/output.md",
-      "bytes": 16525,
-      "sha256": "cea376df95868252f8572c25d461d1ad31895938f4df5cabc51d71c37ac2e85d"
+      "bytes": 17996,
+      "sha256": "cc43c6a09278c4ae68ad4d730601041754166b071045af6582894206a9247a43"
     },
     {
       "path": "skills/investment-mentor/references/review.md",
-      "bytes": 3591,
-      "sha256": "4cced4d52e1f3af3725b4d2b22b1c46aae2b8af928e422f7b0973ad16216f5ed"
+      "bytes": 4633,
+      "sha256": "cc0b9f2b184d6b72f9bef9154525ea601db14a00bca4b5538ce55942f0bece47"
     },
     {
       "path": "skills/investment-mentor/references/screening.md",
-      "bytes": 2962,
-      "sha256": "78cb5e8d6c634c58af593af126ead4b4ae0c19510d61e25cb18027c294175dca"
+      "bytes": 3745,
+      "sha256": "665a98832bfe2e7612160e187e6b06debbdfcd0949eb4186e68185750a0c8a6e"
     },
     {
       "path": "skills/investment-mentor/references/valuation.md",
@@ -170,18 +170,18 @@
     },
     {
       "path": "skills/investment-mentor/references/writing.md",
-      "bytes": 3404,
-      "sha256": "b1b1bcd88b4ac18177de35e1d834cdb258b7e3b1f054a0457a8c4ce25dd5d580"
+      "bytes": 6871,
+      "sha256": "8d8315dcae150e2b9df790998c613775d2282a1bf8b4850a96a32c58ecf9134c"
     },
     {
       "path": "skills/investment-mentor/scripts/build_output.py",
-      "bytes": 15230,
-      "sha256": "5bc4b429c9a418cedb0c69d8f8b7f910565228a4d2759ae0594a4fcb565f21f3"
+      "bytes": 16682,
+      "sha256": "47905d5bd687f6ddd6087a73dbefac9dff5d04e44cd549582656841df4aaca13"
     },
     {
       "path": "skills/investment-mentor/scripts/build_prompt.py",
-      "bytes": 1750,
-      "sha256": "23bd1c2cb463c8ae095b23844196568ab5d21b6bd870039840e55f35b2a65be4"
+      "bytes": 5174,
+      "sha256": "dff1b17f49503358420452d674a190e0e50c07d1e6dd8cd59b0bff5f1a54ecdf"
     },
     {
       "path": "skills/investment-mentor/scripts/build_rules.py",
@@ -195,38 +195,38 @@
     },
     {
       "path": "skills/investment-mentor/scripts/check_output.py",
-      "bytes": 8649,
-      "sha256": "e7a16ef2f16f648529a5f7bdd6a78ef20413a5a6b53c34afc421e62789452f1f"
+      "bytes": 12916,
+      "sha256": "2f6b6f60bfd9618db8f218eda22a619afb0f91cf850db58d1d0034c5e4a0bb22"
     },
     {
       "path": "skills/investment-mentor/scripts/test_output.py",
-      "bytes": 8376,
-      "sha256": "29db0d1a3addd67ba4e8f80a7d212e1b72a8b15e8a8ed770a6b1fb2cd543cb7a"
+      "bytes": 10573,
+      "sha256": "a25be8d985f017927328db813147225bcd472404dde312688f55918ee9b6f85c"
     },
     {
       "path": "skills/investment-mentor/scripts/validate.py",
-      "bytes": 8989,
-      "sha256": "7df8ef255c2c5dc10056644157ddba3f02d0b725b48f4ab31007503b8cae5707"
+      "bytes": 10980,
+      "sha256": "24461d3303084e0a953163e4a36c1ab57c877e6aaef9d5db5a61b8a802f54a79"
     },
     {
       "path": "skills/investment-mentor/SKILL.md",
-      "bytes": 16543,
-      "sha256": "8cb9b13c8305fcf683b9dfe45dfb3ffbc1c84ea81b6b440e74798d8536fd967b"
+      "bytes": 17210,
+      "sha256": "060b72d570a77e6ef5e9c2e97be5bc93a3c7dce8bcee371cf583eb22f2b5797b"
     },
     {
       "path": "skills/investment-mentor/SOURCE_INVENTORY.md",
-      "bytes": 2349,
-      "sha256": "fc79269bda7c51e250f87b8740a5056f5af17b099d54d74e9a7049020e5dc88f"
+      "bytes": 2912,
+      "sha256": "53b4acf117e5f0fe149f936c4f4f767f41cb045a2a82bdf407643a4df4fb154f"
     },
     {
       "path": "skills/investment-mentor/STANDALONE_PROMPT.md",
-      "bytes": 109505,
-      "sha256": "b4ab13f5d4cac06460149e1172d2bb6549a8601f63166e6407fdd7360ae191b5"
+      "bytes": 118895,
+      "sha256": "a645abb624aee2cb629ee599f8dc3fbe3147e0ae4c1e320c0efb081a96dd42c0"
     },
     {
       "path": "skills/investment-mentor/tests/AUTHOR_REVIEW.md",
-      "bytes": 247,
-      "sha256": "6436df4685180547118e690759c3ebeffb772ff502d35478e0550a850cd16912"
+      "bytes": 329,
+      "sha256": "3dd7f6b74b3cc992ac559884e560c598643bda3a24a214b6fb18a69a86e8d1ef"
     },
     {
       "path": "skills/investment-mentor/tests/behavior-review.md",
@@ -245,33 +245,33 @@
     },
     {
       "path": "skills/investment-mentor/tests/fixtures/report-brief.md",
-      "bytes": 3608,
-      "sha256": "3a3095b47ee7b4ddd7829cfc9fe3722c9f04393bd0237a25702bbe9c1f8e9bc3"
+      "bytes": 6672,
+      "sha256": "0a0604ac8554c15d775f231b7c210f8861529a14383535955c658a7134fd47d7"
     },
     {
       "path": "skills/investment-mentor/tests/fixtures/report-comprehensive.md",
-      "bytes": 17940,
-      "sha256": "5809d591773ba03dd094c0bf67accd778c900327821150a5e72cb4e9c3dff0e9"
+      "bytes": 22468,
+      "sha256": "38492c20c39d8fe813e302dbab888a3fe7a69b6c9d600dc50aec2af30de2356b"
     },
     {
       "path": "skills/investment-mentor/tests/fixtures/report-detailed.md",
-      "bytes": 16619,
-      "sha256": "5c5b2f9fa612daf1afcdc55144398991e84b9dec7e6334d96a16a93c28793309"
+      "bytes": 19921,
+      "sha256": "3afbfea0f9df811299506f1f6e2c0ad7a47b53bc061be086e471875179170f8a"
     },
     {
       "path": "skills/investment-mentor/tests/output-checker-results.json",
-      "bytes": 11549,
-      "sha256": "99eafecaff1478a020e8c6f26da59d503c3be2bca94bbfa7cff573e17bbf4cd0"
+      "bytes": 14693,
+      "sha256": "a503365fb605000db3b3e6b3a55007a2ae25cea0699923ded8af6d1bcb90d39c"
     },
     {
       "path": "skills/investment-mentor/tests/prompts.json",
-      "bytes": 47369,
-      "sha256": "9c15fe84ecaafbe2a4f5b50e6de2ad897384b4867fb9cec403f7553886da7caf"
+      "bytes": 48722,
+      "sha256": "f01de8ab8d416a3c1d58466f52942c524ae27287622983a429b58439238a24d0"
     },
     {
       "path": "skills/investment-mentor/tests/README.md",
-      "bytes": 1279,
-      "sha256": "c37326b23c015405b934cab08892f9c062f60f8968c32e4211acb6990289c13f"
+      "bytes": 1209,
+      "sha256": "e17d59ae2f9ebc026b1b620837a2b864a996c1c1e5ba2869673f2f4db31d90a6"
     },
     {
       "path": "skills/investment-mentor/tests/results.json",
@@ -280,18 +280,18 @@
     },
     {
       "path": "skills/investment-mentor/tests/rubric.json",
-      "bytes": 19429,
-      "sha256": "4a27215dc5350ac70d723de1dd2ddf405092d926a18d4060e39cebd2b2c895f0"
+      "bytes": 20092,
+      "sha256": "7d3acaa052293b4712f6b3c68b8970fe76555b78195c32881d46b65ce866e9e0"
     },
     {
       "path": "skills/investment-mentor/tests/structural-results.json",
-      "bytes": 15243,
-      "sha256": "f38ca9bd25d81d9c1893a2b066155aa68a993a1de8fbf159d0da4c18a40c54d3"
+      "bytes": 23453,
+      "sha256": "3228103cf39207cc19b1cecbdec22c50c1d8b099fbf187ab4b9ccdb7b0922326"
     },
     {
       "path": "skills/investment-mentor/tests/TEST_REPORT.md",
-      "bytes": 632,
-      "sha256": "dd470847075436234d880810aa8d6ad1d0e8894193c20867a6a82c1b475b5a33"
+      "bytes": 1088,
+      "sha256": "3399568ab1dabf6de71b9aeec43f8c2f12914479889bd1c16cc1774afadacbb2"
     }
   ]
 }

@@ -50,7 +50,11 @@
       "checker_test_passed": true,
       "observed_errors": [
         "一级标题缺失、增添或顺序不符",
-        "缺少指定表头：关键证据"
+        "缺少指定表头：关键证据",
+        "证据引用缺少附录定义：E01",
+        "证据引用缺少附录定义：E02",
+        "证据引用缺少附录定义：E03",
+        "证据引用缺少附录定义：E04"
       ]
     },
     {
@@ -143,7 +147,11 @@
       "observed_mechanical_pass": false,
       "checker_test_passed": true,
       "observed_errors": [
-        "价值点五层不全或重复：设备复购的持续价值"
+        "五层对象承接无前项",
+        "五层对象承接无前项",
+        "五层对象承接无前项",
+        "五层对象承接无前项",
+        "价值点五层不全或重复：同上"
       ]
     },
     {
@@ -200,7 +208,11 @@
       "observed_mechanical_pass": false,
       "checker_test_passed": true,
       "observed_errors": [
-        "缺少指定表头：关键证据"
+        "缺少指定表头：关键证据",
+        "证据引用缺少附录定义：E01",
+        "证据引用缺少附录定义：E02",
+        "证据引用缺少附录定义：E03",
+        "证据引用缺少附录定义：E04"
       ]
     },
     {
@@ -216,7 +228,7 @@
       "observed_mechanical_pass": false,
       "checker_test_passed": true,
       "observed_errors": [
-        "缺口/不适用说明缺少所需证据：DP五层纵向验证结果"
+        "缺口/不适用说明缺少所需证据：核心价值逐层验证（五层穿透）"
       ]
     },
     {
@@ -247,8 +259,10 @@
       "checker_test_passed": true,
       "observed_errors": [
         "五层对象承接无前项",
-        "价值点五层不全或重复：同上",
-        "价值点五层不全或重复：设备复购的持续价值"
+        "五层对象承接无前项",
+        "五层对象承接无前项",
+        "五层对象承接无前项",
+        "五层对象承接无前项"
       ]
     },
     {
@@ -307,6 +321,109 @@
       ]
     },
     {
+      "test": "registered_evidence_reference",
+      "expected_mechanical_pass": true,
+      "observed_mechanical_pass": true,
+      "checker_test_passed": true,
+      "observed_errors": []
+    },
+    {
+      "test": "brief_evidence_range",
+      "expected_mechanical_pass": true,
+      "observed_mechanical_pass": true,
+      "checker_test_passed": true,
+      "observed_errors": []
+    },
+    {
+      "test": "dangling_prose_reference",
+      "expected_mechanical_pass": false,
+      "observed_mechanical_pass": false,
+      "checker_test_passed": true,
+      "observed_errors": [
+        "证据引用缺少附录定义：E99"
+      ]
+    },
+    {
+      "test": "dangling_evidence_table_reference",
+      "expected_mechanical_pass": false,
+      "observed_mechanical_pass": false,
+      "checker_test_passed": true,
+      "observed_errors": [
+        "证据引用缺少附录定义：E99"
+      ]
+    },
+    {
+      "test": "literal_model_id_and_quoted_source",
+      "expected_mechanical_pass": true,
+      "observed_mechanical_pass": true,
+      "checker_test_passed": true,
+      "observed_errors": []
+    },
+    {
+      "test": "explicit_template_marker",
+      "expected_mechanical_pass": false,
+      "observed_mechanical_pass": false,
+      "checker_test_passed": true,
+      "observed_errors": [
+        "第230行残留模板占位符"
+      ]
+    },
+    {
+      "test": "template_cell",
+      "expected_mechanical_pass": false,
+      "observed_mechanical_pass": false,
+      "checker_test_passed": true,
+      "observed_errors": [
+        "第232行残留模板占位符"
+      ]
+    },
+    {
+      "test": "explicit_unknown_with_reason",
+      "expected_mechanical_pass": true,
+      "observed_mechanical_pass": true,
+      "checker_test_passed": true,
+      "observed_errors": []
+    },
+    {
+      "test": "equivalent_exact_values",
+      "expected_mechanical_pass": true,
+      "observed_mechanical_pass": true,
+      "checker_test_passed": true,
+      "observed_errors": []
+    },
+    {
+      "test": "exact_value_conflict",
+      "expected_mechanical_pass": false,
+      "observed_mechanical_pass": false,
+      "checker_test_passed": true,
+      "observed_errors": [
+        "数值核对项 N01 在相同口径下数值不一致"
+      ]
+    },
+    {
+      "test": "same_id_scope_conflict",
+      "expected_mechanical_pass": false,
+      "observed_mechanical_pass": false,
+      "checker_test_passed": true,
+      "observed_errors": [
+        "数值核对项 N01 的口径字段不一致：口径"
+      ]
+    },
+    {
+      "test": "separate_forecast_scope",
+      "expected_mechanical_pass": true,
+      "observed_mechanical_pass": true,
+      "checker_test_passed": true,
+      "observed_errors": []
+    },
+    {
+      "test": "unknown_and_bound_require_review",
+      "expected_mechanical_pass": true,
+      "observed_mechanical_pass": true,
+      "checker_test_passed": true,
+      "observed_errors": []
+    },
+    {
       "test": "diligence_explicit_specialized",
       "expected_mechanical_pass": true,
       "observed_mechanical_pass": true,
@@ -335,8 +452,8 @@
       "observed_errors": []
     }
   ],
-  "tests_total": 38,
-  "tests_passed": 38,
+  "tests_total": 51,
+  "tests_passed": 51,
   "all_checker_tests_passed": true,
   "author_fixture_arithmetic": {
     "unit": "万元",

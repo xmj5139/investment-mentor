@@ -23,3 +23,7 @@ v0.3原ZIP SHA256：`968f94254868a28237b5af5e2ddcf2b9911f5852ff1332a09b3fd5e3b92
 ## 0.4.5增量
 
 2026-10-27基于0.4.4制作；48份源文件及原交付包保留。中文关键规则原文保留，英文依据这些规则编写；行业与制度引用未另行声称全文或现行性复核。新增源为references/key-rules.json，运行使用生成的入口。行为结果只以本轮记录为准。
+
+## 0.4.6增量
+
+以[公开版 0.4.5 快照](https://github.com/xmj5139/investment-mentor/tree/ba5cf3e46c89c0022872133bfaf784c38a373eb4)为基线，按用户确认范围独立编写。基金适配分开判断和成稿检查参考 [VC-PreDD](https://github.com/one5ds/VC-PreDD/blob/3afe34cfd358b889b573515d6f6147c05f5d6d98/SKILL.md)，任务与模块对应参考 [investor-skill](https://github.com/D-kart/investor-skill/blob/72c363d3429ce8a500e569aac8bdf4b0dc9f47f3/SKILL.md)。新规则、程序和匿名用例使用本技能既有证据口径与报告目录。

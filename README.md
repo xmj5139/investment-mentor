@@ -1,6 +1,6 @@
 # Investment Mentor
 
-面向中国机构一级市场股权投资的 Agent Skill，当前版本 **0.4.5 候选版**。用于未上市企业初筛、BP分析、尽调、财务测算、估值条款、投委会、投后退出，以及按行业和实际活动开展的ESG判断。
+面向中国机构一级市场股权投资的 Agent Skill，当前版本 **v0.5.0**。用于未上市企业初筛、BP分析、尽调、财务测算、估值条款、投委会、投后退出，以及按行业和实际活动开展的ESG判断。
 
 Private-company investment research with traceable evidence, conditional financial analysis, industry-specific ESG review, and Chinese-first reports. Key execution rules include concise English equivalents.
 
@@ -22,7 +22,7 @@ ESG优先覆盖半导体与电子、装备与新材料、能源与环保、软�
 
 ## 当前状态
 
-这是可继续测试的候选版，**没有四通道全部通过的结论**。目录检查通过不能证明模型行为、事实或投资判断正确。双语也没有被证实能提升准确率或效率。
+v0.5.0 调整三档投研备忘录的写法和栏目名称，把投资判断放在前面，减少简报、正文与附录之间的重复，并更新三档匿名样稿。项目判断和指定基金适配分开呈现。
 
 - [近期版本更新](CHANGELOG.md)
 - [测试范围与已知问题](docs/TESTING.md)
@@ -30,7 +30,7 @@ ESG优先覆盖半导体与电子、装备与新材料、能源与环保、软�
 - [发布内容与隐私边界](docs/PACKAGING.md)
 - [通用技能内的历史测试](skills/investment-mentor/tests/TEST_REPORT.md)
 
-本次公开整理没有实施新的投资判断规则，不冒充0.4.6。真实项目PDF、财务数据、原始分析、私有测试输入/运行器、机器路径和凭据均不在本仓库。未新增许可证文件。
+本版通过包结构、报告检查器和计算器的程序验证。跨模型行为观察见测试页的历史记录。
 
 目录与元数据按[Agent Skills规范](https://agentskills.io/specification)组织；不据此承诺各宿主原生发现和所有模型表现相同。
 

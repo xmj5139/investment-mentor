@@ -1,5 +1,5 @@
 {
-  "version": "0.4.5",
+  "version": "0.5.0",
   "purpose": "Canonical paired rules; optional maintenance data. Runtime uses the rendered SKILL.md, not a required parser. English is a concise semantic restatement, not a second workflow.",
   "rules": [
     {
@@ -49,8 +49,8 @@
     },
     {
       "id": "K10",
-      "zh": "CD识别价值、DP按问题验证、CI按条件触发；需要CI时四种状态单选。不强造Alpha，不把公司成长潜力、跟进价值与特定价格下回报混同。缺决定性事实只暂停受影响判断，不要求完成所有尽调才允许启动尽调。",
-      "en": "Use CD for value identification, DP for question-driven layered validation, and CI only when its conditions apply. Select one of the four existing CI states when needed. Do not manufacture alpha or equate company potential, follow-up value, and returns at a particular price. Missing decisive facts pause dependent conclusions; they do not require all diligence to be complete before diligence may begin."
+      "zh": "CD识别价值、DP按问题验证、CI按条件触发；需要CI时四种状态单选。不强造Alpha，不把公司成长潜力、跟进价值与特定价格下回报混同。涉及指定基金时，项目判断和基金适配分别给出。只用已确认且适用的基金约束判断硬门槛，缺项只暂停对应适配结论。缺决定性事实只暂停受影响判断，不要求完成所有尽调才允许启动尽调。",
+      "en": "Use CD for value identification, DP for question-driven layered validation, and CI only when its conditions apply. Select one of the four existing CI states when needed. Do not manufacture alpha or equate company potential, follow-up value, and returns at a particular price. For a specified fund, report project merit and fund fit separately. Use confirmed, applicable fund constraints for hard gates and pause only the dependent fit judgment when inputs are missing. Continue independently supported work; missing decisive facts do not prevent starting diligence."
     },
     {
       "id": "K11",
@@ -69,8 +69,8 @@
     },
     {
       "id": "K14",
-      "zh": "输出以人阅读为目标：使用完整、连贯的中文解释依据与判断的关系，表格后的关键含义用正文说明。先说明企业/业务与阶段，迅速给当前动作、价值、风险与下一证据。避免术语堆叠、机械标签、反复套话和同一信息多处复制；证据代码用于追溯，不能替代分析。重要限制紧邻结论，语言润色不能抬高证据强度。",
-      "en": "Write for human readers in fluent, connected Chinese unless the user requests another language. Explain how evidence supports a judgment, add prose around important tables, and keep limitations next to conclusions. Avoid jargon piles, repetitive labels, formulaic filler, and duplicated paragraphs. Evidence IDs support traceability; they do not replace analysis. Editing for readability must not strengthen a claim beyond its evidence."
+      "zh": "输出以人阅读为目标，采用投研备忘录风格：结论前置、完整连贯的中文、自然投研语言替代内部协议术语。集中前置材料边界，仅在改变判断的硬约束旁加注限制，避免逐句堆砌免责尾巴；跨层写一次、多处引，严禁把同一事实在简报、表格、展开段和附录里反复改写。多条算式与风险用短列表或紧凑小表呈现，关键结论与数字适度加粗；证据代码仅作轻量化溯源，语言润色不能抬高证据强度。",
+      "en": "Write for human readers in an investment-memo style: lead with conclusions in fluent, connected Chinese and translate internal protocol jargon into natural investment language. State scope limits upfront and attach caveats next to decision-changing constraints instead of repeating disclaimers on every sentence. Write once and cross-reference across layers without duplicating paragraphs. Use compact bullets or tables for formulas and multi-item lists, highlight key numbers, keep evidence IDs lightweight, and never let readability edits overstate evidence strength."
     }
   ],
   "closing_zh": "第一层六字段固定，区分公司潜力、跟进价值和价格下回报。问题写清“需要确认什么—为何影响判断—需要什么材料—答复前暂停哪项”。附录记录实际完成范围和未完成项，不以勾选通过证明事实；模型及技术运行细节仅在测试/审计请求中展开。"

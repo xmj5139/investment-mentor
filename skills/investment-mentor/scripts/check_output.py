@@ -1,7 +1,8 @@
-"""Optional Markdown structure checker. Never grades facts, prose quality or investment merit."""
+"""Check report structure, explicit evidence references and declared value consistency."""
 from pathlib import Path
 import argparse,json,re
 from collections import defaultdict
+from decimal import Decimal
 
 ROOT=Path(__file__).resolve().parents[1]
 def normalize(title):
@@ -36,6 +37,97 @@ def tables(lines):
    found.append(([cell(x) for x in lines[i].strip().strip('|').split('|')],rows));i=j
   else:i+=1
  return found
+
+
+EVIDENCE_ID = r'E[0-9]{1,6}'
+EVIDENCE_LIST = rf'{EVIDENCE_ID}(?:\s*[、,，]\s*{EVIDENCE_ID})*'
+EVIDENCE_CITATION = re.compile(rf'\[({EVIDENCE_LIST})\]|【({EVIDENCE_LIST})】')
+EVIDENCE_DEFINITION = re.compile(
+    rf'^\s*(?:[-*+]\s+)?(?:\[|【)?({EVIDENCE_ID})(?:\]|】)?'
+    rf'(?:\s*[—–-]\s*({EVIDENCE_ID}))?\s*(?:[:：]|为|对应|来自)\s*\S'
+)
+PLACEHOLDER = re.compile(
+    r'\{\{[^{}\n]+\}\}|[\[【<](?:待填(?:写|入)?|请填写|占位符)[^\]】>\n]*[\]】>]'
+)
+EMPTY_TEMPLATE_VALUE = re.compile(r'(?:^|[:：]\s*)(?:TODO|TBD)\s*[。.!！]*$', re.I)
+VALUE_COLUMNS = ['核对编号', '主体', '指标', '期间', '口径', '单位', '数值']
+UNKNOWN_VALUES = {'', '-', '—', '未知', '待核', '待确认', '未提供', '不适用'}
+EXACT_NUMBER = re.compile(r'[+-]?(?:[0-9]{1,3}(?:,[0-9]{3})+|[0-9]+)(?:\.[0-9]+)?')
+
+
+def check_placeholders(lines):
+    errors = []
+    for number, line in enumerate(lines, 1):
+        if line.lstrip().startswith('>'):
+            continue
+        values = (cell.strip(' *`') for cell in line.split('|'))
+        if PLACEHOLDER.search(line) or any(EMPTY_TEMPLATE_VALUE.search(value) for value in values):
+            errors.append(f'第{number}行残留模板占位符')
+    return errors
+
+
+def check_evidence_references(lines, appendix, schema):
+    defined = set()
+    ranges = []
+    for header, rows in tables(appendix):
+        if header == schema['tables']['evidence']:
+            defined.update(row[0] for row in rows if row and re.fullmatch(EVIDENCE_ID, row[0]))
+    for line in appendix:
+        match = EVIDENCE_DEFINITION.match(line.replace('**', '').replace('`', ''))
+        if match:
+            start, end = match.groups()
+            defined.add(start)
+            if end:
+                defined.add(end)
+                if len(start) == len(end):
+                    ranges.append((start, end))
+
+    cited = set()
+    for line in lines:
+        if not line.lstrip().startswith('>'):
+            for match in EVIDENCE_CITATION.finditer(line):
+                cited.update(re.findall(EVIDENCE_ID, match.group(1) or match.group(2)))
+    evidence_headers = [schema['tables'][key] for key in ('views', 'dimensions', 'dp')]
+    for header, rows in tables(lines):
+        if header in evidence_headers:
+            for row in rows:
+                if len(row) > 2 and re.fullmatch(EVIDENCE_LIST, row[2]):
+                    cited.update(re.findall(EVIDENCE_ID, row[2]))
+    return [
+        f'证据引用缺少附录定义：{code}' for code in sorted(cited - defined)
+        if not any(len(code) == len(start) and start <= code <= end for start, end in ranges)
+    ]
+
+
+def check_value_consistency(lines):
+    scopes = defaultdict(lambda: defaultdict(set))
+    numbers = defaultdict(set)
+    errors = []
+    for header, rows in tables(lines):
+        if header != VALUE_COLUMNS:
+            continue
+        for row in rows:
+            if len(row) != len(VALUE_COLUMNS) or not re.fullmatch(r'N[0-9]+', row[0]):
+                errors.append('数值核对表列数或核对编号不符')
+                continue
+            code, *scope, value = (re.sub(r'\s+', '', cell) for cell in row)
+            if re.fullmatch(r'[0-9]{4}年', scope[2]):
+                scope[2] = scope[2][:-1]
+            for label, cell in zip(VALUE_COLUMNS[1:-1], scope):
+                if cell not in UNKNOWN_VALUES:
+                    scopes[code][label].add(cell)
+            if EXACT_NUMBER.fullmatch(value) and all(cell not in UNKNOWN_VALUES for cell in scope):
+                numbers[(code, tuple(scope))].add(Decimal(value.replace(',', '')))
+
+    for code, fields in scopes.items():
+        conflicting = [label for label, values in fields.items() if len(values) > 1]
+        if conflicting:
+            errors.append(f'数值核对项 {code} 的口径字段不一致：' + '、'.join(conflicting))
+    for code in sorted({code for (code, _), values in numbers.items() if len(values) > 1}):
+        errors.append(f'数值核对项 {code} 在相同口径下数值不一致')
+    return errors
+
+
 def check(text,depth='detailed',task='project',schema=None):
  s=schema or json.loads((ROOT/'references/output-schema.json').read_text(encoding='utf-8'))
  if depth not in s['depths'] or task not in ['project',*s['specialized']]:raise ValueError('Unknown depth/task')
@@ -129,7 +221,10 @@ def check(text,depth='detailed',task='project',schema=None):
  if depth!='brief':
   name=s['appendix_full'][0]
   if name not in waivers:require_table(sections.get((expected[3],name),[]),'evidence','关键证据')
- return {'mechanical_contract_pass':not errors,'depth':depth,'task':task,'errors':errors,'declared_waivers':waivers,'limits':'Only Markdown titles/order, field presence, table shape and limited empty/prose checks. Does not verify facts, reasoning, authorized assumptions, completed tools, fluency or investment merit; human review required.'}
+ errors.extend(check_placeholders(lines))
+ errors.extend(check_evidence_references(lines,blocks.get(expected[3],[]),s))
+ errors.extend(check_value_consistency(lines))
+ return {'mechanical_contract_pass':not errors,'depth':depth,'task':task,'errors':errors,'declared_waivers':waivers,'limits':'Checks Markdown structure, explicit placeholders, designated evidence references and repeated values in declared comparison tables. Does not verify facts, source support, reasoning, assumptions, completed tools, fluency or investment merit.'}
 
 if __name__=='__main__':
  p=argparse.ArgumentParser(description=__doc__);p.add_argument('report',type=Path);p.add_argument('--depth',choices=['brief','detailed','comprehensive'],default='detailed');p.add_argument('--task',choices=['project','diligence','valuation','committee','monitoring'],default='project');a=p.parse_args()

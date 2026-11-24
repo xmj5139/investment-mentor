@@ -24,12 +24,13 @@ def run():
  sample_math={'unit':'万元','cash_endings':[float(x) for x in cash_rows],'post_money':float(post),'current_stake':float(stake),'exit_stake':float(exit_stake),'scenario_distributions':[float(x) for x in distributions],'scenario_moics':[float(x) for x in moics],'scenario_annual_returns':[float(x)**(1/trade['years'])-1 for x in moics],'analysis_fcf':float(fcf),'scope':'Independent arithmetic of author fixture; not real inputs or model behavior.'}
  samples={depth:(fixtures/f'report-{depth}.md').read_text(encoding='utf-8') for depth in s['depths']}
  d=samples['detailed'];tests=[]
- def add(name,text,expected,depth='detailed',task='project'):tests.append((name,text,expected,depth,task))
+ def add(name,text,expected,depth='detailed',task='project',error_contains=None):
+  tests.append((name,text,expected,depth,task,error_contains))
  for depth,text in samples.items():add(depth+'_complete',text,True,depth)
  numbered_meta=d
  for i,name in enumerate(s['metadata'],1):numbered_meta=numbered_meta.replace('**'+name+'：**',str(i)+'. **'+name+'：**',1)
  add('numbered_metadata_preserves_six_fields',numbered_meta,True)
- add('typographic_heading_spaces',d.replace('9个投资人视角总览','9 个投资人视角总览').replace('DP五层纵向验证结果','DP 五层纵向验证结果').replace('ESG情况与投资影响','ESG 情况与投资影响'),True)
+ add('typographic_heading_spaces',d.replace('9个投资人视角总览','9 个投资人视角总览').replace('核心价值逐层验证（五层穿透）','核心价值逐层验证 （五层穿透）').replace('ESG情况与投资影响','ESG 情况与投资影响'),True)
  add('display_emphasis_preserves_labels',d.replace('| 投资人视角 |','| **投资人视角** |').replace('| 真问题 |','| **真问题** |'),True)
  add('missing_top_layer',d[:d.index('# 三、专家附录')],False)
  add('top_order_changed',d.replace('# 一、投资判断简报','# 临时层').replace('# 二、结构化项目画像','# 一、投资判断简报').replace('# 临时层','# 二、结构化项目画像'),False)
@@ -50,8 +51,8 @@ def run():
  add('wrong_declared_depth',d,False,'brief')
  add('wrong_evidence_header',d.replace('发布或数据日期','发布日期',1),False)
  waiver='本节资料不足。\n\n已知：只有企业整体愿景。\n\n缺口：尚未识别可核对的具体价值对象。\n\n影响：暂停五层结论，不影响列出取证安排。\n\n所需证据：具体产品、客户和交付记录，再选择验证对象。'
- add('explicit_dp_waiver',replace_block(d,'7. DP五层纵向验证结果',waiver),True)
- add('incomplete_waiver',replace_block(d,'7. DP五层纵向验证结果',waiver.replace('所需证据：具体产品、客户和交付记录，再选择验证对象。','')),False)
+ add('explicit_dp_waiver',replace_block(d,'7. 核心价值逐层验证（五层穿透）',waiver),True)
+ add('incomplete_waiver',replace_block(d,'7. 核心价值逐层验证（五层穿透）',waiver.replace('所需证据：具体产品、客户和交付记录，再选择验证对象。','')),False)
  # ESG mutations test the format contract only, not the truth of ESG judgments.
  numbered=d
  for i,name in enumerate(s['esg_sections'],1):numbered=numbered.replace('### '+name,'### 9.'+str(i)+' '+name,1)
@@ -69,14 +70,33 @@ def run():
  add('esg_empty_subsection',re.sub(r'(?ms)(^### 治理情况（G）\n).*?(?=^### |^## )',r'\1\n待核。\n\n',d,count=1),False)
  add('brief_esg_removed',samples['brief'].replace('### ESG情况与投资影响','ESG情况与投资影响',1),False,'brief')
  add('brief_esg_missing_governance',samples['brief'].replace('治理','管理').replace('（G）',''),False,'brief')
+ # Explicit traceability and consistency. Unknowns and differently scoped values remain valid.
+ add('registered_evidence_reference',d+'\n依据见 [E01、E02]。\n',True)
+ add('brief_evidence_range',samples['brief']+'\n依据见 [E02]。\n',True,'brief')
+ add('dangling_prose_reference',d+'\n依据见 [E99]。\n',False,error_contains='证据引用缺少附录定义：E99')
+ add('dangling_evidence_table_reference',d.replace('| E01、E02 |','| E99 |',1),False,error_contains='证据引用缺少附录定义：E99')
+ add('literal_model_id_and_quoted_source',d+'\n题设型号是 E99。\n> 原稿留有 {{预留}} 和 [E99]。\n',True)
+ add('explicit_template_marker',d+'\n待处理字段仍有 {{录入值}}。\n',False,error_contains='残留模板占位符')
+ add('template_cell',d+'\n| 项目 | 值 |\n| --- | --- |\n| 价格 | TBD |\n',False,error_contains='残留模板占位符')
+ add('explicit_unknown_with_reason',d+'\n报价待确认。需取得条款清单，当前暂停价格下的回报判断。\n',True)
+ value_table='\n| 核对编号 | 主体 | 指标 | 期间 | 口径 | 单位 | 数值 |\n| --- | --- | --- | --- | --- | --- | --- |\n'
+ original='| N01 | 匿名甲 | 收入 | 2025年 | 合并实绩 | 万元 | 2,000 |\n'
+ same='| N01 | 匿名甲 | 收入 | 2025 | 合并实绩 | 万元 | 2000.00 |\n'
+ add('equivalent_exact_values',d+value_table+original+same,True)
+ add('exact_value_conflict',d+value_table+original+same.replace('2000.00','2100'),False,error_contains='在相同口径下数值不一致')
+ add('same_id_scope_conflict',d+value_table+original+same.replace('合并实绩','单体实绩'),False,error_contains='口径字段不一致')
+ add('separate_forecast_scope',d+value_table+original+same.replace('N01','N02').replace('合并实绩','合并预测').replace('2000.00','2100'),True)
+ add('unknown_and_bound_require_review',d+value_table+original+same.replace('2000.00','待确认')+same.replace('2000.00','至少1000'),True)
  # A specialized brief uses the same outer layers and an explicit allowed body.
  for task,names in s['specialized'].items():
   sample=samples['brief'];a=sample.index('# 二、结构化项目画像');b=sample.index('# 三、专家附录')
   body='\n\n'.join('## '+str(i)+'. '+name+'\n\n本条仅验证专项目录的机械切换，不作为该专项的业务样稿或模型回答。' for i,name in enumerate(names,1))
   add(task+'_explicit_specialized',sample[:a]+'# 二、结构化项目画像\n\n'+body+'\n\n'+sample[b:],True,'brief',task)
  results=[]
- for name,text,expected,depth,task in tests:
-  r=check(text,depth,task,s);results.append({'test':name,'expected_mechanical_pass':expected,'observed_mechanical_pass':r['mechanical_contract_pass'],'checker_test_passed':r['mechanical_contract_pass']==expected,'observed_errors':r['errors']})
+ for name,text,expected,depth,task,error_contains in tests:
+  r=check(text,depth,task,s)
+  has_expected_error=not error_contains or any(error_contains in error for error in r['errors'])
+  results.append({'test':name,'expected_mechanical_pass':expected,'observed_mechanical_pass':r['mechanical_contract_pass'],'checker_test_passed':r['mechanical_contract_pass']==expected and has_expected_error,'observed_errors':r['errors']})
  return {'kind':'unit tests of mechanical checker, not agent runs','tests':results,'tests_total':len(results),'tests_passed':sum(r['checker_test_passed'] for r in results),'all_checker_tests_passed':all(r['checker_test_passed'] for r in results),'author_fixture_arithmetic':sample_math,'limits':'Positive fixtures are author-constructed; this does not test model obedience, factual accuracy, prose fluency or investment quality.'}
 
 if __name__=='__main__':

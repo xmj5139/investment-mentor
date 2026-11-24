@@ -1,9 +1,227 @@
 {
   "structural_pass": true,
   "files": 50,
-  "local_links_checked": 90,
-  "anonymous_cases": 70,
-  "standalone_characters": 44840,
+  "local_links_checked": 96,
+  "anonymous_cases": 73,
+  "standalone_characters": 48496,
+  "task_prompt_checks": [
+    {
+      "task": "project",
+      "depth": "brief",
+      "passed": true,
+      "checks": {
+        "scoped": true,
+        "dependencies": true,
+        "output_contract": true,
+        "depth": true,
+        "self_contained": true
+      }
+    },
+    {
+      "task": "project",
+      "depth": "detailed",
+      "passed": true,
+      "checks": {
+        "scoped": true,
+        "dependencies": true,
+        "output_contract": true,
+        "depth": true,
+        "self_contained": true
+      }
+    },
+    {
+      "task": "project",
+      "depth": "comprehensive",
+      "passed": true,
+      "checks": {
+        "scoped": true,
+        "dependencies": true,
+        "output_contract": true,
+        "depth": true,
+        "self_contained": true
+      }
+    },
+    {
+      "task": "screening",
+      "depth": "brief",
+      "passed": true,
+      "checks": {
+        "scoped": true,
+        "dependencies": true,
+        "output_contract": true,
+        "depth": true,
+        "self_contained": true
+      }
+    },
+    {
+      "task": "screening",
+      "depth": "detailed",
+      "passed": true,
+      "checks": {
+        "scoped": true,
+        "dependencies": true,
+        "output_contract": true,
+        "depth": true,
+        "self_contained": true
+      }
+    },
+    {
+      "task": "screening",
+      "depth": "comprehensive",
+      "passed": true,
+      "checks": {
+        "scoped": true,
+        "dependencies": true,
+        "output_contract": true,
+        "depth": true,
+        "self_contained": true
+      }
+    },
+    {
+      "task": "diligence",
+      "depth": "brief",
+      "passed": true,
+      "checks": {
+        "scoped": true,
+        "dependencies": true,
+        "output_contract": true,
+        "depth": true,
+        "self_contained": true
+      }
+    },
+    {
+      "task": "diligence",
+      "depth": "detailed",
+      "passed": true,
+      "checks": {
+        "scoped": true,
+        "dependencies": true,
+        "output_contract": true,
+        "depth": true,
+        "self_contained": true
+      }
+    },
+    {
+      "task": "diligence",
+      "depth": "comprehensive",
+      "passed": true,
+      "checks": {
+        "scoped": true,
+        "dependencies": true,
+        "output_contract": true,
+        "depth": true,
+        "self_contained": true
+      }
+    },
+    {
+      "task": "valuation",
+      "depth": "brief",
+      "passed": true,
+      "checks": {
+        "scoped": true,
+        "dependencies": true,
+        "output_contract": true,
+        "depth": true,
+        "self_contained": true
+      }
+    },
+    {
+      "task": "valuation",
+      "depth": "detailed",
+      "passed": true,
+      "checks": {
+        "scoped": true,
+        "dependencies": true,
+        "output_contract": true,
+        "depth": true,
+        "self_contained": true
+      }
+    },
+    {
+      "task": "valuation",
+      "depth": "comprehensive",
+      "passed": true,
+      "checks": {
+        "scoped": true,
+        "dependencies": true,
+        "output_contract": true,
+        "depth": true,
+        "self_contained": true
+      }
+    },
+    {
+      "task": "monitoring",
+      "depth": "brief",
+      "passed": true,
+      "checks": {
+        "scoped": true,
+        "dependencies": true,
+        "output_contract": true,
+        "depth": true,
+        "self_contained": true
+      }
+    },
+    {
+      "task": "monitoring",
+      "depth": "detailed",
+      "passed": true,
+      "checks": {
+        "scoped": true,
+        "dependencies": true,
+        "output_contract": true,
+        "depth": true,
+        "self_contained": true
+      }
+    },
+    {
+      "task": "monitoring",
+      "depth": "comprehensive",
+      "passed": true,
+      "checks": {
+        "scoped": true,
+        "dependencies": true,
+        "output_contract": true,
+        "depth": true,
+        "self_contained": true
+      }
+    },
+    {
+      "task": "finance",
+      "depth": null,
+      "passed": true,
+      "checks": {
+        "scoped": true,
+        "dependencies": true,
+        "output_contract": true,
+        "depth": true,
+        "self_contained": true
+      }
+    },
+    {
+      "task": "esg",
+      "depth": null,
+      "passed": true,
+      "checks": {
+        "scoped": true,
+        "dependencies": true,
+        "output_contract": true,
+        "depth": true,
+        "self_contained": true
+      }
+    },
+    {
+      "task": "follow-up",
+      "depth": null,
+      "passed": true,
+      "checks": {
+        "scoped": true,
+        "dependencies": true,
+        "output_contract": true,
+        "depth": true,
+        "self_contained": true
+      }
+    }
+  ],
   "calculator_results": [
     {
       "fixture": 1,
@@ -67,6 +285,9 @@
     }
   ],
   "reference_urls": [
+    "https://github.com/D-kart/investor-skill/blob/72c363d3429ce8a500e569aac8bdf4b0dc9f47f3/SKILL.md",
+    "https://github.com/one5ds/VC-PreDD/blob/3afe34cfd358b889b573515d6f6147c05f5d6d98/SKILL.md",
+    "https://github.com/xmj5139/investment-mentor/tree/ba5cf3e46c89c0022872133bfaf784c38a373eb4",
     "https://hq.mof.gov.cn/tongzhitonggao/202510/t20251030_3975237.htm",
     "https://kjs.mof.gov.cn/zhengcefabu/202509/t20250912_3972190.htm",
     "https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=A3D90E7A6E56FD97E106F29F0905A2F0",
@@ -135,7 +356,11 @@
         "checker_test_passed": true,
         "observed_errors": [
           "一级标题缺失、增添或顺序不符",
-          "缺少指定表头：关键证据"
+          "缺少指定表头：关键证据",
+          "证据引用缺少附录定义：E01",
+          "证据引用缺少附录定义：E02",
+          "证据引用缺少附录定义：E03",
+          "证据引用缺少附录定义：E04"
         ]
       },
       {
@@ -228,7 +453,11 @@
         "observed_mechanical_pass": false,
         "checker_test_passed": true,
         "observed_errors": [
-          "价值点五层不全或重复：设备复购的持续价值"
+          "五层对象承接无前项",
+          "五层对象承接无前项",
+          "五层对象承接无前项",
+          "五层对象承接无前项",
+          "价值点五层不全或重复：同上"
         ]
       },
       {
@@ -285,7 +514,11 @@
         "observed_mechanical_pass": false,
         "checker_test_passed": true,
         "observed_errors": [
-          "缺少指定表头：关键证据"
+          "缺少指定表头：关键证据",
+          "证据引用缺少附录定义：E01",
+          "证据引用缺少附录定义：E02",
+          "证据引用缺少附录定义：E03",
+          "证据引用缺少附录定义：E04"
         ]
       },
       {
@@ -301,7 +534,7 @@
         "observed_mechanical_pass": false,
         "checker_test_passed": true,
         "observed_errors": [
-          "缺口/不适用说明缺少所需证据：DP五层纵向验证结果"
+          "缺口/不适用说明缺少所需证据：核心价值逐层验证（五层穿透）"
         ]
       },
       {
@@ -332,8 +565,10 @@
         "checker_test_passed": true,
         "observed_errors": [
           "五层对象承接无前项",
-          "价值点五层不全或重复：同上",
-          "价值点五层不全或重复：设备复购的持续价值"
+          "五层对象承接无前项",
+          "五层对象承接无前项",
+          "五层对象承接无前项",
+          "五层对象承接无前项"
         ]
       },
       {
@@ -392,6 +627,109 @@
         ]
       },
       {
+        "test": "registered_evidence_reference",
+        "expected_mechanical_pass": true,
+        "observed_mechanical_pass": true,
+        "checker_test_passed": true,
+        "observed_errors": []
+      },
+      {
+        "test": "brief_evidence_range",
+        "expected_mechanical_pass": true,
+        "observed_mechanical_pass": true,
+        "checker_test_passed": true,
+        "observed_errors": []
+      },
+      {
+        "test": "dangling_prose_reference",
+        "expected_mechanical_pass": false,
+        "observed_mechanical_pass": false,
+        "checker_test_passed": true,
+        "observed_errors": [
+          "证据引用缺少附录定义：E99"
+        ]
+      },
+      {
+        "test": "dangling_evidence_table_reference",
+        "expected_mechanical_pass": false,
+        "observed_mechanical_pass": false,
+        "checker_test_passed": true,
+        "observed_errors": [
+          "证据引用缺少附录定义：E99"
+        ]
+      },
+      {
+        "test": "literal_model_id_and_quoted_source",
+        "expected_mechanical_pass": true,
+        "observed_mechanical_pass": true,
+        "checker_test_passed": true,
+        "observed_errors": []
+      },
+      {
+        "test": "explicit_template_marker",
+        "expected_mechanical_pass": false,
+        "observed_mechanical_pass": false,
+        "checker_test_passed": true,
+        "observed_errors": [
+          "第230行残留模板占位符"
+        ]
+      },
+      {
+        "test": "template_cell",
+        "expected_mechanical_pass": false,
+        "observed_mechanical_pass": false,
+        "checker_test_passed": true,
+        "observed_errors": [
+          "第232行残留模板占位符"
+        ]
+      },
+      {
+        "test": "explicit_unknown_with_reason",
+        "expected_mechanical_pass": true,
+        "observed_mechanical_pass": true,
+        "checker_test_passed": true,
+        "observed_errors": []
+      },
+      {
+        "test": "equivalent_exact_values",
+        "expected_mechanical_pass": true,
+        "observed_mechanical_pass": true,
+        "checker_test_passed": true,
+        "observed_errors": []
+      },
+      {
+        "test": "exact_value_conflict",
+        "expected_mechanical_pass": false,
+        "observed_mechanical_pass": false,
+        "checker_test_passed": true,
+        "observed_errors": [
+          "数值核对项 N01 在相同口径下数值不一致"
+        ]
+      },
+      {
+        "test": "same_id_scope_conflict",
+        "expected_mechanical_pass": false,
+        "observed_mechanical_pass": false,
+        "checker_test_passed": true,
+        "observed_errors": [
+          "数值核对项 N01 的口径字段不一致：口径"
+        ]
+      },
+      {
+        "test": "separate_forecast_scope",
+        "expected_mechanical_pass": true,
+        "observed_mechanical_pass": true,
+        "checker_test_passed": true,
+        "observed_errors": []
+      },
+      {
+        "test": "unknown_and_bound_require_review",
+        "expected_mechanical_pass": true,
+        "observed_mechanical_pass": true,
+        "checker_test_passed": true,
+        "observed_errors": []
+      },
+      {
         "test": "diligence_explicit_specialized",
         "expected_mechanical_pass": true,
         "observed_mechanical_pass": true,
@@ -420,8 +758,8 @@
         "observed_errors": []
       }
     ],
-    "tests_total": 38,
-    "tests_passed": 38,
+    "tests_total": 51,
+    "tests_passed": 51,
     "all_checker_tests_passed": true,
     "author_fixture_arithmetic": {
       "unit": "万元",
@@ -454,5 +792,5 @@
   },
   "rule_contract_kind": "literal presence and shared generation only; not behavior grading",
   "errors": [],
-  "limits": "Structure, exact prompt generation and real calculator executions only; not model behavior, external facts or native discovery."
+  "limits": "Structure, prompt generation, report checks and calculator executions only; not model behavior, external facts or native discovery."
 }

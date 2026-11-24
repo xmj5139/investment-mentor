@@ -1,7 +1,16 @@
-# 0.4.5实际测试记录
+<!-- Updated for 0.5.0 on 2026-11-22: all 51 mechanical checker tests and full structural validation pass. -->
+# 测试记录
+
+## 0.4.6 候选版 · 2026-11-10
+
+本轮包结构验证通过，18 项任务提示词组合、51 项报告检查器用例和 12 项计算器用例均通过。三档报告结构除版本字段外与 0.4.5 一致。明细见[结构化验证](structural-results.json)及[报告检查明细](output-checker-results.json)。
+
+新增 F01—F03 为待执行的匿名行为用例。本轮未运行模型行为测试。
+
+## 0.4.5 历史行为测试
 
 2026-10-27，候选版本，实际保留17份最终回答。调用完成不表示内容合格；存在事实迁移、适用性、DP覆盖、文字和格式缺陷。
 
-详见[行为与环境结果](behavior-review.md)、[结构化结果](results.json)、[结构与算术](structural-results.json)及[检查器用例](output-checker-results.json)。完整原答和行号评阅位于独立测试ZIP。
+详见[行为与环境结果](behavior-review.md)及[历史结构化结果](results.json)。完整原答和行号评阅位于当时的独立测试 ZIP。
 
 14组中英关键规则已同源同步；不能据一次版本比较声称英文提升思维能力或效率。原生发现、公开联网、附件/真实项目及全部旧用例未在本轮验证。

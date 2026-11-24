@@ -8,9 +8,43 @@ import re
 import subprocess
 import sys
 from urllib.parse import unquote,urlsplit
-from build_prompt import build
+from build_prompt import build, DEPTHS, plain
 from build_rules import render as render_rules
 from build_output import build as build_output_contract
+
+
+def check_task_prompts(root, full_prompt):
+    references = root / 'references'
+    required = {
+        'project': ('screening', 'diligence', 'valuation', 'china', 'esg'),
+        'screening': ('screening', 'finance', 'valuation', 'china', 'esg'),
+        'diligence': ('diligence', 'finance', 'china', 'esg'),
+        'valuation': ('valuation', 'finance', 'china'),
+        'monitoring': ('monitoring', 'finance', 'valuation', 'esg'),
+        'finance': ('finance',),
+        'esg': ('esg', 'finance', 'esg-health'),
+        'follow-up': ('screening', 'china', 'clarification'),
+    }
+    sources = {
+        name: plain((references / f'{name}.md').read_text(encoding='utf-8'))
+        for name in {name for names in required.values() for name in names}
+        | {'output', 'review', 'evidence', 'committee'}
+    }
+    results = []
+    for task, names in required.items():
+        depths = DEPTHS if task in {'project', 'screening', 'diligence', 'valuation', 'monitoring'} else (None,)
+        for depth in depths:
+            prompt = build(root, task, depth)
+            checks = {
+                'scoped': len(prompt) < len(full_prompt) and sources['committee'] not in prompt,
+                'dependencies': all(sources[name] in prompt for name in (*names, 'review', 'evidence')),
+                'output_contract': (sources['output'] in prompt) == (depth is not None),
+                'depth': f'所选档位为{DEPTHS[depth]}' in prompt if depth else '直接回答当前问题' in prompt,
+                'self_contained': not re.search(r'\[[^\]]*\]\([^)]+\)', prompt),
+            }
+            results.append({'task': task, 'depth': depth, 'passed': all(checks.values()), 'checks': checks})
+    return results
+
 
 def validate(root):
     errors=[];links=0;remote=set();calc_results=[]
@@ -59,6 +93,10 @@ def validate(root):
     prompt=(root/'STANDALONE_PROMPT.md').read_text(encoding='utf-8')
     if prompt!=build(root):errors.append('Shared source/standalone drift')
     if re.search(r'\[[^\]]*\]\([^)]+\)',prompt):errors.append('Standalone external dependency')
+    prompt_results=check_task_prompts(root,prompt)
+    for result in prompt_results:
+        if not result['passed']:
+            errors.append(f"Task prompt check failed: {result['task']} / {result['depth']}")
     contracts={
         'SKILL.md':['默认联网核验','必须向用户提出具体问题','用户未回答不视为同意','输入—计算—用途','证据状态一致'],
         'references/clarification.md':['没有答复','不自动构成对假设的确认','已经问到答复'],
@@ -99,7 +137,7 @@ def validate(root):
         for item in json.loads(manifest.read_text(encoding='utf-8'))['files']:
             path=root/item['path']
             if not path.is_file() or hashlib.sha256(path.read_bytes()).hexdigest()!=item['sha256']:errors.append('Manifest mismatch '+item['path'])
-    return {'structural_pass':not errors,'files':len(files),'local_links_checked':links,'anonymous_cases':len(cases),'standalone_characters':len(prompt),'calculator_results':calc_results,'reference_urls':sorted(remote),'mechanical_checker_tests':checker,'rule_contract_kind':'literal presence and shared generation only; not behavior grading','errors':errors,'limits':'Structure, exact prompt generation and real calculator executions only; not model behavior, external facts or native discovery.'}
+    return {'structural_pass':not errors,'files':len(files),'local_links_checked':links,'anonymous_cases':len(cases),'standalone_characters':len(prompt),'task_prompt_checks':prompt_results,'calculator_results':calc_results,'reference_urls':sorted(remote),'mechanical_checker_tests':checker,'rule_contract_kind':'literal presence and shared generation only; not behavior grading','errors':errors,'limits':'Structure, prompt generation, report checks and calculator executions only; not model behavior, external facts or native discovery.'}
 
 if __name__=='__main__':
     parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('skill_directory',type=Path);args=parser.parse_args();result=validate(args.skill_directory.resolve());print(json.dumps(result,ensure_ascii=False,indent=2));raise SystemExit(0 if result['structural_pass'] else 1)
